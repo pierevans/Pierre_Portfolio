@@ -1,0 +1,79 @@
+@use "../../index.scss" as *;
+
+.Footer {
+  background-color: $heading-color;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px;
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+    margin-bottom: 20px;
+    a {
+      color: #ffff;
+      transition: color 0.3s;
+      font-size: 40px;
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+  .footer-heading {
+    position: relative;
+    color: #ffffff;
+    font-size: 100px;
+    margin-bottom: 20px;
+    &::before {
+      position: absolute;
+      left: -250px;
+      top: -100px;
+      content: "";
+      width: 150px;
+      height: 200px;
+      background: url("../../assets/aws_logo_footer.png") no-repeat center;
+      background-size: contain;
+    }
+    &::after {
+      position: absolute;
+      right: -250px;
+      top: -100px;
+      content: "";
+      width: 150px;
+      height: 200px;
+      background: url("../../assets/aws_logo_footer.png") no-repeat center;
+      background-size: contain;
+    }
+  }
+
+  .back-top {
+    position: relative;
+    font-size: 18px;
+    color: lighten($text-color, 20);
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-weight: 500;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $primary-color;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      width: 0%;
+      height: 1px;
+      background-color: $primary-color;
+      bottom: 0px;
+      left: 0px;
+      transition: width 0.3s;
+    }
+    &:hover::after {
+      width: 100%;
+    }
+  }
+}
