@@ -6,7 +6,7 @@ import "./Contact.scss";
 
 const Contact = () => {
   return (
-    <div className="Contact">
+    <div className="Contact-card">
       <div className="background-pattern"></div>
 
       <div className="contact-container">

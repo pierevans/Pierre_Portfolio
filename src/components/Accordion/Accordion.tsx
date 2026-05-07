@@ -1,7 +1,9 @@
 
 const Accordion = () => {
   return (
-    <div>Accordion</div>
+    <div>
+      
+    </div>
   )
 }
 
