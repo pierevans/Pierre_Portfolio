@@ -7,8 +7,8 @@ import { useState } from "react";
 
 
 const Navbar = () => {
-  // const [move, setMove] = useState()
-  // const toggle = ()=>
+  const [move, setMove] = useState(false);
+  const toggle = ()=> setMove(!move)
 
   return (
     <div>
@@ -33,8 +33,8 @@ const Navbar = () => {
           </li>
          
         </ul>
-        <div className="theme" onClick={()=> toggle()}>
-          <div className="btn-theme"></div>
+        <div className="theme" onClick={toggle}>
+          <div className={move? "btn-theme active":"btn-theme"}></div>
         </div>
       </nav>
     </div>
