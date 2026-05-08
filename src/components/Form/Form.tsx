@@ -1,5 +1,6 @@
 import { useForm, type SubmitHandler } from "react-hook-form";
-import { IoIosSend } from "react-icons/io";
+import { RiMailSendLine } from "react-icons/ri";
+
 
 import "./Form.scss";
 interface FormData {
@@ -41,7 +42,7 @@ const Form = () => {
       <button type="submit" className="btn-mail">
         <p>Submit</p>
         <span>
-          <IoIosSend />
+          <RiMailSendLine />
         </span>
       </button>
     </form>

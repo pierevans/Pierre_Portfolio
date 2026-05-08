@@ -1,0 +1,79 @@
+@use "../../index.scss" as *;
+
+.accordion-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 50px 0;
+
+  h2 {
+    display: inline-flex;
+    margin-bottom: 70px;
+    gap: 10px;
+    width: 80%;
+  }
+
+  .accordion {
+    width: 60%;
+
+    .data {
+      position: relative;
+      background-color: #fff;
+      margin-bottom: 15px;
+      border-radius: 10px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        padding: 1px;
+        border-radius: 10px;
+        background: linear-gradient(
+          to right,
+          rgba(123, 47, 247, 1),
+          rgba(255, 253, 55, 1)
+        );
+
+        -webkit-mask:
+          linear-gradient(#fff 0 0) content-box,
+          linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        pointer-events: none;
+      }
+
+      .question {
+        display: flex;
+        padding: 20px;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        font-size: 18px;
+
+        span {
+          font-size: 24px;
+        }
+      }
+
+      .answer {
+        padding: 0px 50px 20px 20px;
+        text-align: justify;
+        color: $text-color;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition:
+          max-height 0.5s ease,
+          opacity 0.5s ease;
+        color: $text-color;
+      }
+
+      .answer.show {
+        max-height: 100px;
+        opacity: 1;
+      }
+    }
+  }
+}

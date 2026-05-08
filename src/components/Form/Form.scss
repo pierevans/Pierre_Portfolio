@@ -1,5 +1,6 @@
 @use "../../index.scss" as *;
 .form {
+  
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -23,9 +24,7 @@
   }
 
   .btn-mail {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: inline-flex;
     font-size: 18px;
     border-radius: 25px;
     border: none;

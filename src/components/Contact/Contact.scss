@@ -2,7 +2,7 @@
 
 .contact-card {
   position: relative;
-  height: 700px;
+  padding: 100px 0;
   display: flex;
   align-items: center;
 
@@ -36,11 +36,15 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    padding: 40px 0;
     box-shadow:
       3px 3px 10px lighten($text-color, 50%),
       -2px -2px 10px lighten($text-color, 50%);
 
     .contact-mail {
+      box-shadow:
+        3px 3px 10px lighten($primary-color, 30%),
+        -2px -2px 10px lighten($primary-color, 30%);
       height: 80%;
       width: 35%;
       background-color: #ffff;

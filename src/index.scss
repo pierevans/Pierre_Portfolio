@@ -12,12 +12,13 @@ $heading-font-family: "IBM Plex Mono", monospace;
 // !color:
 $primary-color: #7B2FF7;
 $secondary-color: #e9ccff;
-$bg-color: #fffcfc;
+$bg-color: #f7f6f6;
 $third-color: #FFFD37;
 $heading-color: #2C041C; 
 $text-color: #4B4E53;
 
-$color-shadow: rgb(75, 78, 83,);
+$border-color: linear-gradient(43deg, rgba(123, 47, 247, 1) 40%, rgba(191, 0, 255, 1) 61%, rgba(255, 253, 55, 1) 89%);
+
 
 
 * {
@@ -55,6 +56,9 @@ h2 {
 }
 h3 {
   font-size: 32px;
+}
+h4 {
+  font-size: 20px;
 }
 
 button {
