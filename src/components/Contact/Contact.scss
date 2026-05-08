@@ -1,6 +1,6 @@
 @use "../../index.scss" as *;
 
-.Contact {
+.contact-card {
   position: relative;
   height: 700px;
   display: flex;
@@ -36,6 +36,9 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    box-shadow:
+      3px 3px 10px lighten($text-color, 50%),
+      -2px -2px 10px lighten($text-color, 50%);
 
     .contact-mail {
       height: 80%;
@@ -47,71 +50,8 @@
         display: flex;
         align-items: center;
         gap: 10px;
-        margin: 10px 0 0 20px;
-        color: #4b4e53;
-      }
-      .btn-mail {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 18px;
-        border-radius: 25px;
-        border: none;
-        background-color: $primary-color;
-        font-weight: 500;
-        color: #ffff;
-        padding: 10px 40px;
-        position: relative;
-        overflow: hidden;
-        cursor: pointer;
-
-        p {
-            transition: transform .3s ease;
-        }
-
-        span {
-            font-size: 25px;
-          position: absolute;
-          right: 20px;
-          opacity: 0;
-          transform: translateX(50px);
-          transition:
-            transform 0.3s ease,
-            opacity 0.3s ease;
-        }
-
-        &:hover {
-          background: #7b2ff7;
-          background: linear-gradient(
-            43deg,
-            rgba(123, 47, 247, 1) 49%,
-            rgba(191, 0, 255, 1) 70%,
-            rgba(255, 253, 55, 1) 100%
-          );
-        }
-      
-      
-        &:hover p {
-          transform: translateX(-20px);
-        }
-      
-      
-        &:hover span {
-          opacity: 1;
-          transform: translateX(0px);
-        }
-        // &:active span {
-        //   opacity: 1;
-        //   animation: move 2s ease;
-        // }
-        // @keyframes move {
-        //   0% {
-        //     transform: translateY(10px);
-        //   }
-        //   100% {
-        //     transform: translate(100px -100px);
-        //   }
-        // }
+        margin: 30px 0 0 50px;
+        color: $primary-color;
       }
     }
     .contact-img {

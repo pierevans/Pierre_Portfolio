@@ -1,4 +1,4 @@
-const faqData = [
+const faqData: {question: string, answer: string}[]= [
   {
     question: "Who am I?",
     answer:
