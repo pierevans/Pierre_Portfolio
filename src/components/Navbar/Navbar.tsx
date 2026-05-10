@@ -15,12 +15,12 @@ const Navbar = () => {
       <nav className="navbar">
         <div className="nav-logo">
           <h3>
-            PK
+            <a href="">PK</a>
           </h3>
         </div>
         <ul className="nav-links">
           <li>
-            <a href=""><TbCloudComputing/> Cloud</a>
+            <a href=""><TbCloudComputing/>Cloud</a>
           </li>
           <li>
             <a href=""><SiDevbox/> Dev</a>

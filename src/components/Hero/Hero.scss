@@ -1,0 +1,11 @@
+@use "../../index.scss" as *;
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 768px;
+    background-color: $bg-color;
+    text-align: center;
+}

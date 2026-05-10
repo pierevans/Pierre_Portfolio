@@ -16,7 +16,7 @@
   .nav-logo {
     width: fit-content;
 
-    h3 {
+    h3 a{
       font-family: "Cyber Alert", sans-serif;
       color: $primary-color;
     }
@@ -29,7 +29,7 @@
     background-color: $heading-color;
     border-radius: 25px;
     width: 700px;
-    height: 45px;
+    height: 50px;
     box-shadow:
       3px 3px 10px lighten($text-color, 40%),
       -2px -2px 10px lighten($text-color, 40%);
@@ -41,9 +41,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 150px;
+        width: 160px;
         background-color: aliceblue;
-        height: 35px;
+        height: 40px;
         border-radius: 25px;
         font-size: 18px;
         font-weight: bold;
