@@ -3,6 +3,7 @@ import { MdConnectWithoutContact } from "react-icons/md";
 import { MdDescription } from "react-icons/md";
 import { TbCloudComputing } from "react-icons/tb";
 import { SiDevbox } from "react-icons/si";
+import { FaHome } from "react-icons/fa";
 import { useState } from "react";
 
 
@@ -19,6 +20,9 @@ const Navbar = () => {
           </h3>
         </div>
         <ul className="nav-links">
+          <li>
+            <a href=""><FaHome/>Home</a>
+          </li>
           <li>
             <a href=""><TbCloudComputing/>Cloud</a>
           </li>

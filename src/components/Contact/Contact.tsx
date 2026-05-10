@@ -7,12 +7,12 @@ const Contact = () => {
   return (
     <div className="contact-card">
       <div className="background-pattern"></div>
-
+      <h2>Get In Touch</h2>
       <div className="contact-container">
         <div className="contact-mail">
           <h3 className="contact-title">
             <IoMdContacts />
-            LET'S CONNECT
+            Let's Connect
           </h3>
           <Form/>
         </div>

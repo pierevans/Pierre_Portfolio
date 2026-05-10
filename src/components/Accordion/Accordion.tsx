@@ -1,6 +1,5 @@
 import faqData from "./faqData";
 import "./Accordion.scss";
-import { MdOutlineQuestionAnswer } from "react-icons/md";
 import { IoIosArrowUp } from "react-icons/io";
 import { IoIosArrowDown } from "react-icons/io";
 import { useState } from "react";
@@ -17,8 +16,7 @@ const Accordion = () => {
   return (
     <div className="accordion-container">
       <h2>
-        <MdOutlineQuestionAnswer />
-        More About Me
+        <p>More About Me</p>
       </h2>
       <div className="accordion">
         {faqData.map((data, i) => (

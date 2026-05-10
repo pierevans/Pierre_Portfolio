@@ -2,12 +2,13 @@
 
 .contact-card {
   position: relative;
-  padding: 100px 0;
+  padding: 20px 0;
   display: flex;
   align-items: center;
-
+flex-direction: column;
   .background-pattern {
     position: absolute;
+    z-index: -9;
     height: 100%;
     width: 100%;
     background-image: radial-gradient(#e5e7eb 2px, transparent 2px);
@@ -29,7 +30,7 @@
   .contact-container {
     z-index: 1;
     background-color: $secondary-color;
-    margin: 50px auto;
+    margin:0 auto 100px;
     height: 70%;
     width: 80%;
     border-radius: 10px;
