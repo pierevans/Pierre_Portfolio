@@ -8,11 +8,18 @@ const HeaderAnimation = ({ headline }: Props) => {
   const words: string[] = headline.split(" ");
 
   return (
-    <div>
+    <div className="header-animation" style={{ display: "inline-flex", gap: "15px", alignItems: "flex-start"}}>
       {words.map((word: string, i: number) => (
-        <motion.h1 initial={{}} animate={{}} transition={{}} key={i}>
+        <motion.h2
+          initial={{opacity: 0, y: 30}}
+          whileInView={{opacity: 1, y: 0}}
+          transition={{ duration: 0.3, delay: i * 0.1}}
+          viewport={{once: true}}
+          
+          key={i}
+        >
           {word}
-        </motion.h1>
+        </motion.h2>
       ))}
     </div>
   );

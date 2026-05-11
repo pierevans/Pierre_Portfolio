@@ -1,5 +1,6 @@
 import faqData from "./faqData";
 import "./Accordion.scss";
+import HeaderAnimation from "../Animation/HeaderAnimation";
 import { IoIosArrowUp } from "react-icons/io";
 import { IoIosArrowDown } from "react-icons/io";
 import { useState } from "react";
@@ -16,7 +17,7 @@ const Accordion = () => {
   return (
     <div className="accordion-container">
       <h2>
-        <p>More About Me</p>
+        <HeaderAnimation headline="More About Me" />
       </h2>
       <div className="accordion">
         {faqData.map((data, i) => (
@@ -27,7 +28,9 @@ const Accordion = () => {
                 {clicked === i ? <IoIosArrowUp /> : <IoIosArrowDown />}
               </span>
             </div>
-            <div className={clicked === i? "answer show": "answer"}>{data.answer}</div>
+            <div className={clicked === i ? "answer show" : "answer"}>
+              {data.answer}
+            </div>
           </div>
         ))}
       </div>

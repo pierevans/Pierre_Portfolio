@@ -1,8 +1,7 @@
 import { useForm, type SubmitHandler } from "react-hook-form";
 import { RiMailSendLine } from "react-icons/ri";
-
-
 import "./Form.scss";
+
 interface FormData {
   name: string;
   email: string;

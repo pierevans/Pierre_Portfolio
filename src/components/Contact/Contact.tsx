@@ -1,20 +1,25 @@
 import { IoMdContacts } from "react-icons/io";
 import Image from "../../assets/cloud_pic1.png";
-import Form from "../Form/Form"
+import Form from "../Form/Form";
 import "./Contact.scss";
+import HeaderAnimation from "../Animation/HeaderAnimation";
+import TitleAnimation from "../Animation/TitleAnimation";
 
 const Contact = () => {
   return (
+    
     <div className="contact-card">
+      <h2>
+        <HeaderAnimation headline="Get In Touch" />
+      </h2>
       <div className="background-pattern"></div>
-      <h2>Get In Touch</h2>
       <div className="contact-container">
         <div className="contact-mail">
           <h3 className="contact-title">
             <IoMdContacts />
-            Let's Connect
+          <TitleAnimation title= " Let's Connect"/>
           </h3>
-          <Form/>
+          <Form />
         </div>
         <div className="contact-img">
           <img src={Image} alt="cloud" />
