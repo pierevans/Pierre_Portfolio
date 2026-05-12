@@ -1,0 +1,108 @@
+// @use "../../../index.scss" as *;
+
+// .cert-card {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   width: 250px;
+//   height: 370px;
+//   img {
+//     width: 90%;
+//   }
+
+//   .cert-title {
+//     height: 40px;
+//     display: flex;
+//     align-items: center;
+//     justify-content: flex-start;
+//     padding: 0 5px;
+//     margin: 0px 10px;
+//     gap: 8px;
+//     color: $text-color;
+
+//     p {
+//       max-width: 0;
+//       opacity: 0;
+//       overflow: hidden;
+//       white-space: nowrap;
+//       transform: translateX(-20px);
+//       transition:
+//         max-width 0.5s ease,
+//         opacity 0.6s ease,
+//         transform 0.5s ease;
+//       font-size: 14px;
+//     }
+//   }
+
+//   &:hover .cert-title p {
+//     max-width: 200px;
+//     opacity: 1;
+//     transform: translateX(-2px);
+//   }
+
+//   &:nth-child(1):hover img {
+//     filter: drop-shadow(2px 4px 8px rgba(0, 0, 0, 0.5))
+//       drop-shadow(-2px -4px 8px rgba(0, 0, 0, 0.5));
+//     transition: filter 0.5s ease;
+//     transform: scale(1.05);
+//     transition: transform 0.5s ease;
+//     transform: scale(1.05);
+//   }
+//   &:nth-child(2):hover img {
+//     filter: drop-shadow(2px 4px 8px rgba(0, 89, 255, 0.8))
+//       drop-shadow(-2px -4px 10px rgba(0, 89, 255, 0.5));
+//     transition: filter 0.5s ease;
+//     transform: scale(1.05);
+//     transition: transform 0.5s ease;
+//     transform: scale(1.05);
+//   }
+
+// &:nth-child(3):hover img {
+//   filter: drop-shadow(2px 4px 8px rgba(33, 124, 94, 0.8))
+//     drop-shadow(-2px -4px 10px rgba(0, 124, 94, 0.5));
+//   transition: filter 0.5s ease;
+//   transform: scale(1.05);
+//   transition: transform 0.5s ease;
+//   transform: scale(1.05);
+// }
+// &:nth-child(4):hover img {
+//   filter:  drop-shadow(2px 4px 8px rgba(33, 124, 94, 0.8))
+//     drop-shadow(-2px -4px 10px rgba(0, 124, 94, 0.5));
+//   transition: filter 0.5s ease;
+//   transform: scale(1.05);
+//   transition: transform 0.5s ease;
+//   transform: scale(1.05);
+// }
+// &:nth-child(5):hover img {
+//   filter:  drop-shadow(2px 4px 8px rgba(33, 124, 94, 0.8))
+//     drop-shadow(-2px -4px 10px rgba(0, 124, 94, 0.5));
+//   transition: filter 0.5s ease;
+//   transform: scale(1.05);
+//   transition: transform 0.5s ease;
+//   transform: scale(1.05);
+// }
+
+// }
+// .cert-card.terraform:hover img {
+//   filter:
+//     drop-shadow(
+//       0 0 15px rgba(132, 61, 255, 0.8)
+//     );
+// }
+
+// .cert-card.kubernetes:hover img {
+//   filter:
+//     drop-shadow(
+//       0 0 15px rgba(0, 89, 255, 0.8)
+//     );
+// }
+
+
+
+// .cert-card.terraform:hover img {
+//   filter: drop-shadow(0 0 15px rgba(132, 61, 255, 0.8));
+// }
+
+// .cert-card.kubernetes:hover img {
+//   filter: drop-shadow(0 0 15px rgba(0, 89, 255, 0.8));
+// }

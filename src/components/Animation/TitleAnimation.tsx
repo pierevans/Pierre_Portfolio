@@ -14,7 +14,7 @@ const TitleAnimation = ({ title }: Props) => {
     >
       {words.map((word: string, i: number) => (
         <motion.h3
-          initial={{ opacity: 0, y: i % 2 ? -30 : 30 }}
+          initial={{ opacity: 0, y: i % 2 ? -30 : 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, delay: i * 0.1 }}
           viewport={{ once: true }}
