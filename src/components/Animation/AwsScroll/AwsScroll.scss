@@ -1,0 +1,12 @@
+@use "../../../index.scss" as *;
+
+.aws-container {
+    display: flex;
+    align-items: center;
+    gap:0 10px;
+    
+    .row1, .row2, .row3, .row4{
+        gap:10px;
+
+    }
+}

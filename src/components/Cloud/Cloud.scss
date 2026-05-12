@@ -5,100 +5,223 @@
   width: 80%;
 
   .cert-container {
-    background-color: bisque;
     padding: 60px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
+    flex-direction: column;
     .aws-cert {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      
       h4 {
         font-style: italic;
       }
-      background-color: brown;
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      flex-wrap: wrap;
-      a {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 250px;
-        height: 370px;
-        img {
-          width: 90%;
-          transition:
-            transform 0.5s ease,
-            filter 0.5s ease;
-        }
-          .cert-title {
-        height: 40px;
+      .aws-cert-list {
         display: flex;
         align-items: center;
-        justify-content: flex-start;
-        padding: 0 5px;
-        margin: 0 10px;
-        gap: 8px;
-        color: $text-color;
+        gap: 30px;
+        flex-wrap: wrap;
+        a {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 30px;
+          width: 255px;
+          height: 370px;
+          img {
+            width: 90%;
+            transition:
+              transform 0.5s ease,
+              filter 0.5s ease;
+          }
+          .cert-title {
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 0 5px;
+            margin: 0 10px;
+            gap: 8px;
+            color: $text-color;
 
-        p {
-          max-width: 0;
-          opacity: 0;
-          overflow: hidden;
-          white-space: nowrap;
-          transform: translateX(-20px);
-          transition:
-            max-width 0.5s ease,
-            opacity 0.6s ease,
-            transform 0.5s ease;
-          font-size: 14px;
+            p {
+              max-width: 0;
+              opacity: 0;
+              overflow: hidden;
+              white-space: nowrap;
+              transform: translateX(-20px);
+              transition:
+                max-width 0.5s ease,
+                opacity 0.6s ease,
+                transform 0.5s ease;
+              font-size: 14px;
+            }
+          }
+
+          &:hover .cert-title p {
+            max-width: 200px;
+            opacity: 1;
+            transform: translateX(0);
+          }
+          &:hover img {
+            transform: scale(1.05);
+          }
+
+          &:nth-child(1):hover img {
+            filter: drop-shadow(2px 4px 8px rgba(0, 0, 0, 0.5))
+              drop-shadow(-2px -4px 8px rgba(0, 0, 0, 0.5));
+          }
+
+          &:nth-child(2):hover img {
+            filter: drop-shadow(2px 4px 8px rgba(0, 89, 255, 0.8))
+              drop-shadow(-2px -4px 10px rgba(0, 89, 255, 0.5));
+          }
+
+          &:nth-child(3):hover img,
+          &:nth-child(4):hover img {
+            filter: drop-shadow(2px 4px 8px rgba(33, 124, 94, 0.8))
+              drop-shadow(-2px -4px 10px rgba(0, 124, 94, 0.5));
+          }
         }
-      }
-      
-      
-      &:hover .cert-title p {
-        max-width: 200px;
-        opacity: 1;
-        transform: translateX(0);
-      }
-      &:hover img {
-        transform: scale(1.05);
-      }
-    }
-    
-
-    
-
-      &:nth-child(1):hover img {
-        filter: drop-shadow(2px 4px 8px rgba(0, 0, 0, 0.5))
-          drop-shadow(-2px -4px 8px rgba(0, 0, 0, 0.5));
-      }
-
-      &:nth-child(2):hover img {
-        filter: drop-shadow(2px 4px 8px rgba(0, 89, 255, 0.8))
-          drop-shadow(-2px -4px 10px rgba(0, 89, 255, 0.5));
-      }
-
-      &:nth-child(3):hover img,
-      &:nth-child(4):hover img{
-        filter: drop-shadow(2px 4px 8px rgba(33, 124, 94, 0.8))
-          drop-shadow(-2px -4px 10px rgba(0, 124, 94, 0.5));
       }
     }
 
     .hash-cert {
       display: flex;
-      align-items: center;
-      gap: 40px;
-      flex-wrap: wrap;
+      justify-content: center;
+      flex-direction: column;
+      h4 {
+        font-style: italic;
+      }
+
+      .terraform-cert-list {
+       
+        display: flex;
+      justify-content: center;
+      flex-direction: column;
+        a {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 30px;
+          width: 255px;
+          height: 370px;
+          img {
+            width: 90%;
+            transition:
+              transform 0.5s ease,
+              filter 0.5s ease;
+            }
+            .cert-title {
+              height: 40px;
+              display: flex;
+              align-items: center;
+              justify-content: flex-start;
+              padding: 0 5px;
+              margin: 0 10px;
+              gap: 8px;
+              color: $text-color;
+  
+              p {
+                max-width: 0;
+                opacity: 0;
+                overflow: hidden;
+                white-space: nowrap;
+                transform: translateX(-20px);
+                transition:
+                  max-width 0.5s ease,
+                  opacity 0.6s ease,
+                  transform 0.5s ease;
+                font-size: 14px;
+              }
+            }
+             &:hover .cert-title p {
+            max-width: 200px;
+            opacity: 1;
+            transform: translateX(0);
+          }
+          &:hover img {
+            transform: scale(1.05);
+          }
+
+
+
+          &:nth-child(1):hover img {
+            filter: drop-shadow(2px 4px 8px rgba(174, 0, 255, 0.5))
+              drop-shadow(-2px -4px 8px rgba(174, 0, 255, 0.5));
+          }
+        }
+      }
     }
 
-    .kub {
+    .kub-cert {
       display: flex;
-      align-items: center;
-      gap: 40px;
-      flex-wrap: wrap;
+      justify-content: center;
+      flex-direction: column;
+      h4 {
+        font-style: italic;
+      }
+
+      .kubernetes-cert-list {
+       
+        display: flex;
+      justify-content: center;
+      flex-direction: column;
+        a {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 30px;
+          width: 255px;
+          height: 370px;
+          img {
+            width: 90%;
+            transition:
+              transform 0.5s ease,
+              filter 0.5s ease;
+            }
+            .cert-title {
+              height: 40px;
+              display: flex;
+              align-items: center;
+              justify-content: flex-start;
+              padding: 0 5px;
+              margin: 0 10px;
+              gap: 8px;
+              color: $text-color;
+  
+              p {
+                max-width: 0;
+                opacity: 0;
+                overflow: hidden;
+                white-space: nowrap;
+                transform: translateX(-20px);
+                transition:
+                  max-width 0.5s ease,
+                  opacity 0.6s ease,
+                  transform 0.5s ease;
+                font-size: 14px;
+              }
+            }
+             &:hover .cert-title p {
+            max-width: 200px;
+            opacity: 1;
+            transform: translateX(0);
+          }
+          &:hover img {
+            transform: scale(1.05);
+          }
+
+
+
+          &:nth-child(1):hover img {
+            filter: drop-shadow(2px 4px 8px rgb(0, 0, 255,0.3))
+              drop-shadow(-2px -4px 8px rgb(0, 0, 255,0.3));
+          }
+        }
+      }
     }
   }
 }
