@@ -1,6 +1,6 @@
 import "../../index.scss";
 import "./Cloud.scss";
-
+import AwsScroll from "../Animation/AwsScroll/AwsScroll";
 import { FaArrowRight } from "react-icons/fa6";
 
 import HeaderAnimation from "../Animation/HeaderAnimation";
@@ -18,6 +18,7 @@ const Cloud = () => {
       <h2>
         <HeaderAnimation headline="Cloud Skills" />
       </h2>
+      <AwsScroll />
       <h3>
         <TitleAnimation title="Cloud Certificates" />
       </h3>
