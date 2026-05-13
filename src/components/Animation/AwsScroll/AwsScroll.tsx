@@ -50,7 +50,7 @@ const AwsScroll = () => {
         initial={{ opacity: 0, scale: 0.8 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{
-          delay: 0.3,
+          delay: 0.1,
         }}
         viewport={{ once: true }}
         className="aws-icon"
@@ -62,7 +62,7 @@ const AwsScroll = () => {
         whileInView={{ x: ["0%", "-33.333%"], opacity: 1 }}
         transition={{
           opacity: {
-            delay: .6,
+            delay: .3,
           },
           x: { duration: 20, ease: "linear", repeat: Infinity },
         }}
@@ -78,7 +78,7 @@ const AwsScroll = () => {
         whileInView={{ x: ["-33.333%", "0%"], opacity: 1 }}
         transition={{
           opacity: {
-            delay: .6,
+            delay: .3,
           },
           x: { duration: 20, ease: "linear", repeat: Infinity },
         }}
@@ -94,7 +94,7 @@ const AwsScroll = () => {
         whileInView={{ x: ["0%", "-33.333%"], opacity: 1 }}
         transition={{
           opacity: {
-            delay: .6,
+            delay: .3,
           },
           x: { duration: 20, ease: "linear", repeat: Infinity },
         }}
@@ -110,7 +110,7 @@ const AwsScroll = () => {
         whileInView={{ x: ["-33.333%", "0%"], opacity: 1 }}
         transition={{
           opacity: {
-            delay: .6,
+            delay: .3,
           },
           x: { duration: 20, ease: "linear", repeat: Infinity },
         }}
