@@ -46,18 +46,27 @@ const AwsScroll = () => {
 
   return (
     <div className="aws-container">
-      <motion.div  whileInView={{opacity: 0, scale: .8}} transition={{
-        delay: .5,
-      }} viewport={{once: true}} className="aws-icon">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{
+          delay: 0.3,
+        }}
+        viewport={{ once: true }}
+        className="aws-icon"
+      >
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" />
       </motion.div>
       <motion.div
-        whileInView={{ x: ["0%", "-33.333%"] }}
+        initial={{ opacity: 0 }}
+        whileInView={{ x: ["0%", "-33.333%"], opacity: 1 }}
         transition={{
-          duration: 20,
-          ease: "linear",
-          repeat: Infinity,
+          opacity: {
+            delay: .6,
+          },
+          x: { duration: 20, ease: "linear", repeat: Infinity },
         }}
+        viewport={{ once: true }}
         className="aws-img"
       >
         {repeated1.map((icon, index) => (
@@ -65,13 +74,15 @@ const AwsScroll = () => {
         ))}
       </motion.div>
       <motion.div
-        whileInView={{ x: ["-33.333%", "0%"] }}
+        initial={{ opacity: 0 }}
+        whileInView={{ x: ["-33.333%", "0%"], opacity: 1 }}
         transition={{
-          duration: 20,
-          ease: "linear",
-          repeat: Infinity,
-          //    repeatType: "loop",
+          opacity: {
+            delay: .6,
+          },
+          x: { duration: 20, ease: "linear", repeat: Infinity },
         }}
+        viewport={{ once: true }}
         className="aws-img"
       >
         {repeated2.map((icon, index) => (
@@ -79,13 +90,15 @@ const AwsScroll = () => {
         ))}
       </motion.div>
       <motion.div
-        whileInView={{ x: ["0%", "-33.333%"] }}
+        initial={{ opacity: 0 }}
+        whileInView={{ x: ["0%", "-33.333%"], opacity: 1 }}
         transition={{
-          duration: 20,
-          ease: "linear",
-          repeat: Infinity,
-          //    repeatType: "loop",
+          opacity: {
+            delay: .6,
+          },
+          x: { duration: 20, ease: "linear", repeat: Infinity },
         }}
+        viewport={{ once: true }}
         className="aws-img"
       >
         {repeated3.map((icon, index) => (
@@ -93,13 +106,15 @@ const AwsScroll = () => {
         ))}
       </motion.div>
       <motion.div
-        whileInView={{ x: ["-33.333%", "0%"] }}
+        initial={{ opacity: 0 }}
+        whileInView={{ x: ["-33.333%", "0%"], opacity: 1 }}
         transition={{
-          duration: 20,
-          ease: "linear",
-          repeat: Infinity,
-          //    repeatType: "loop",
+          opacity: {
+            delay: .6,
+          },
+          x: { duration: 20, ease: "linear", repeat: Infinity },
         }}
+        viewport={{ once: true }}
         className="aws-img"
       >
         {repeated4.map((icon, index) => (

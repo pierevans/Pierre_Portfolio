@@ -5,7 +5,7 @@
   width: 80%;
 
   .cert-container {
-    padding: 60px 0;
+    padding: 60px 0 30px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -222,6 +222,23 @@
           }
         }
       }
+    }
+  }
+  .more-details {
+    font-size: 60px;
+    color: $primary-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    margin: 50px auto 50px ;
+    cursor: pointer;
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+    &:active {
+      transform: scale(0.95);
     }
   }
 }
