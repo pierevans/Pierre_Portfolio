@@ -14,7 +14,7 @@
       display: flex;
       justify-content: center;
       flex-direction: column;
-      
+
       h4 {
         font-style: italic;
       }
@@ -97,10 +97,9 @@
       }
 
       .terraform-cert-list {
-       
         display: flex;
-      justify-content: center;
-      flex-direction: column;
+        justify-content: center;
+        flex-direction: column;
         a {
           display: flex;
           flex-direction: column;
@@ -113,31 +112,31 @@
             transition:
               transform 0.5s ease,
               filter 0.5s ease;
+          }
+          .cert-title {
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 0 5px;
+            margin: 0 10px;
+            gap: 8px;
+            color: $text-color;
+
+            p {
+              max-width: 0;
+              opacity: 0;
+              overflow: hidden;
+              white-space: nowrap;
+              transform: translateX(-20px);
+              transition:
+                max-width 0.5s ease,
+                opacity 0.6s ease,
+                transform 0.5s ease;
+              font-size: 14px;
             }
-            .cert-title {
-              height: 40px;
-              display: flex;
-              align-items: center;
-              justify-content: flex-start;
-              padding: 0 5px;
-              margin: 0 10px;
-              gap: 8px;
-              color: $text-color;
-  
-              p {
-                max-width: 0;
-                opacity: 0;
-                overflow: hidden;
-                white-space: nowrap;
-                transform: translateX(-20px);
-                transition:
-                  max-width 0.5s ease,
-                  opacity 0.6s ease,
-                  transform 0.5s ease;
-                font-size: 14px;
-              }
-            }
-             &:hover .cert-title p {
+          }
+          &:hover .cert-title p {
             max-width: 200px;
             opacity: 1;
             transform: translateX(0);
@@ -145,8 +144,6 @@
           &:hover img {
             transform: scale(1.05);
           }
-
-
 
           &:nth-child(1):hover img {
             filter: drop-shadow(2px 4px 8px rgba(174, 0, 255, 0.5))
@@ -165,10 +162,9 @@
       }
 
       .kubernetes-cert-list {
-       
         display: flex;
-      justify-content: center;
-      flex-direction: column;
+        justify-content: center;
+        flex-direction: column;
         a {
           display: flex;
           flex-direction: column;
@@ -181,31 +177,31 @@
             transition:
               transform 0.5s ease,
               filter 0.5s ease;
+          }
+          .cert-title {
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 0 5px;
+            margin: 0 10px;
+            gap: 8px;
+            color: $text-color;
+
+            p {
+              max-width: 0;
+              opacity: 0;
+              overflow: hidden;
+              white-space: nowrap;
+              transform: translateX(-20px);
+              transition:
+                max-width 0.5s ease,
+                opacity 0.6s ease,
+                transform 0.5s ease;
+              font-size: 14px;
             }
-            .cert-title {
-              height: 40px;
-              display: flex;
-              align-items: center;
-              justify-content: flex-start;
-              padding: 0 5px;
-              margin: 0 10px;
-              gap: 8px;
-              color: $text-color;
-  
-              p {
-                max-width: 0;
-                opacity: 0;
-                overflow: hidden;
-                white-space: nowrap;
-                transform: translateX(-20px);
-                transition:
-                  max-width 0.5s ease,
-                  opacity 0.6s ease,
-                  transform 0.5s ease;
-                font-size: 14px;
-              }
-            }
-             &:hover .cert-title p {
+          }
+          &:hover .cert-title p {
             max-width: 200px;
             opacity: 1;
             transform: translateX(0);
@@ -214,16 +210,15 @@
             transform: scale(1.05);
           }
 
-
-
           &:nth-child(1):hover img {
-            filter: drop-shadow(2px 4px 8px rgb(0, 0, 255,0.3))
-              drop-shadow(-2px -4px 8px rgb(0, 0, 255,0.3));
+            filter: drop-shadow(2px 4px 8px rgb(0, 0, 255, 0.3))
+              drop-shadow(-2px -4px 8px rgb(0, 0, 255, 0.3));
           }
         }
       }
     }
   }
+
   .more-details {
     font-size: 60px;
     color: $primary-color;
@@ -231,7 +226,7 @@
     align-items: center;
     justify-content: center;
     transition: transform 0.3s ease;
-    margin: 0px auto 50px ;
+    margin: 0px auto 50px;
     cursor: pointer;
     &:hover {
       cursor: pointer;
@@ -239,6 +234,66 @@
     }
     &:active {
       transform: scale(0.95);
+    }
+  }
+  .project-container {
+    margin-top: 70px;
+    width: 100%;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    .project-card-container {
+      display: flex;
+      justify-content: space-around;
+      gap:30px;
+      flex-wrap: wrap;
+    }
+
+    .show-card {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #fff;
+      width: 150px;
+      height: 40px;
+      border-radius: 40px;
+      border: none;
+      align-self: center;
+      font-size: 18px;
+      font-weight: 500;
+      transition: width 0.3s ease;
+
+      &:hover {
+        width: 180px;
+        gap: 12px;
+        border: none;
+        color: #fff;
+        background: #7b2ff7;
+        background: linear-gradient(
+          43deg,
+          rgba(123, 47, 247, 1) 49%,
+          rgba(191, 0, 255, 1) 70%,
+          rgba(255, 253, 55, 1) 100%
+        );
+      }
+
+       .show-card-icon {
+        visibility: hidden;
+        opacity: 0;
+        width: 0px;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+      }
+     
+      &:hover .show-card-icon {
+        width: 25px;
+        visibility: visible;
+        align-items: center;
+        justify-content: center;
+        opacity: 1;
+      }
     }
   }
 }

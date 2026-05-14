@@ -1,9 +1,12 @@
 import { motion } from "framer-motion";
 import "../../index.scss";
 import "./Cloud.scss";
+import CloudCard from "../../components/Card/CloudCard/CloudCard";
+
 import AwsScroll from "../Animation/AwsScroll/AwsScroll";
 import { FaArrowRight } from "react-icons/fa6";
 import { CiCirclePlus } from "react-icons/ci";
+import { IoIosArrowDown } from "react-icons/io";
 
 import HeaderAnimation from "../Animation/HeaderAnimation";
 import TitleAnimation from "../Animation/TitleAnimation";
@@ -69,11 +72,14 @@ const Cloud = () => {
                 <FaArrowRight />
               </div>
             </motion.a>
-            <motion.a variants={{
+            <motion.a
+              variants={{
                 hidden: { opacity: 0, x: -40 },
                 show: { opacity: 1, x: 0 },
               }}
-              transition={{ duration: 0.5 }} href="">
+              transition={{ duration: 0.5 }}
+              href=""
+            >
               <img src={dop} alt="" />
               <div className="cert-title">
                 <p>
@@ -162,6 +168,34 @@ const Cloud = () => {
       <h3>
         <TitleAnimation title="Cloud projects" />
       </h3>
+      <div className="project-container">
+        <div className="project-card-container">
+          <CloudCard
+            title="Vghtgyhh"
+            description="lorem 10ffffffffffffffffffff"
+            img={clf}
+          />
+          <CloudCard
+            title="Vghtgyhh"
+            description="lorem 10ffffffffffffffffffff"
+            img={clf}
+          />
+          <CloudCard
+            title="Vghtgyhh"
+            description="lorem 10ffffffffffffffffffff"
+            img={clf} 
+          />
+          <CloudCard
+            title="Vghtgyhh"
+            description="lorem 10ffffffffffffffffffff"
+            img={clf}
+          />
+        </div>
+        <button className="show-card">
+          Show more
+          <IoIosArrowDown className="show-card-icon" />
+        </button>
+      </div>
     </div>
   );
 };
