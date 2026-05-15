@@ -17,7 +17,11 @@ import hcta from "../../assets/cert-badge/HCTA0-004.png";
 import knca from "../../assets/cert-badge/KCNA.webp";
 import saa from "../../assets/cert-badge/SAA-C03.png";
 import sap from "../../assets/cert-badge/SAP-C02.png";
+
+
 const Cloud = () => {
+
+  // const cloudProjects: any[] = ["</>", "</>", "</>", "</>", "</>"];
   return (
     <div className="cloud-container">
       <h2>
@@ -170,11 +174,7 @@ const Cloud = () => {
       </h3>
       <div className="project-container">
         <div className="project-card-container">
-          <CloudCard
-            title="Vghtgyhh"
-            description="lorem 10ffffffffffffffffffff"
-            img={clf}
-          />
+          
           <CloudCard
             title="Vghtgyhh"
             description="lorem 10ffffffffffffffffffff"

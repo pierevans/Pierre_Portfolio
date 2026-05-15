@@ -1,0 +1,35 @@
+@use "../../index.scss" as *;
+
+.feedback-container {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 5px;
+  top: 50%;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: $primary-color;
+  background-color: #ffff;
+  opacity: 0;
+  border: 1px solid rgba($text-color, 0.2);
+  transition: all 0.3s ease;
+  &:hover {
+    border: 1px solid rgba($text-color, 0.4);
+    background-color: $primary-color;
+  }
+  .feedback-btn {
+    transition: all 0.3s ease;
+    width: 50%;
+  }
+  &:hover .feedback-btn {
+    color: #ffff;
+    scale: 1.4;
+  }
+}
+
+.feedback-container.active {
+  opacity: 1;
+}

@@ -7,7 +7,7 @@ import Dev from './components/Dev/Dev'
 import Accordion from './components/Accordion/Accordion'
 import Footer from './components/Footer/Footer'
 import Contact from './components/Contact/Contact'
-
+import Feedback from './components/Feedback/Feedback'
 function App() {
 
   return (
@@ -19,6 +19,7 @@ function App() {
       <Accordion/>
       <Contact/>
       <Footer/>
+      <Feedback/>
     </>
   )
 }
