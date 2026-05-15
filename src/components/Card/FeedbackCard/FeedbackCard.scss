@@ -1,0 +1,126 @@
+@use "../../../index.scss" as *;
+
+.feedback-box {
+  position: fixed;
+  right: 70px;
+  top: 50%;
+  width: 500px;
+  height: 300px;
+  padding: 20px;
+  z-index: 1000;
+  border-radius: 10px;
+  background-color: #ffff;
+  border: 1px solid rgba($text-color, 0.2);
+  box-shadow:
+    3px 3px 10px lighten($text-color, 60%),
+    -2px -2px 10px lighten($text-color, 60%);
+  transform: translate(0, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  // gap: 20px;
+  .box-one {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    height: 80%;
+
+    .ratings {
+      display: flex;
+      gap: 5px;
+      margin: 50px 0 0;
+      button {
+        font-size: 2rem;
+        color: $text-color;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        &:hover {
+          color: $primary-color;
+          scale: 1.1;
+        }
+      }
+    }
+
+    .labels {
+      display: flex;
+      justify-content: space-between;
+      width: 330px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+
+  .box-two {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+    gap: 20px;
+    textarea {
+      width: 80%;
+      height: 150px;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid rgba($text-color, 0.2);
+      resize: none;
+      font-family: inherit;
+      font-size: 14px;
+      &:focus {
+        outline: none;
+        border-color: $primary-color;
+        box-shadow:
+          3px 3px 10px lighten($text-color, 60%),
+          -2px -2px 10px lighten($text-color, 60%);
+      }
+    }
+
+    .buttons {
+      padding: 10px 20px;
+      width: 80%;
+      display: flex;
+      justify-content: center;  
+      gap: 30px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      button {
+        background-color: $primary-color;
+        color: #ffff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        width: 100px;
+        font-weight: 500;
+        font-size: 16px;
+        &:hover {
+          background-color: lighten($primary-color, 10%);
+        }
+      }
+    }
+  }
+
+  .box-three {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 60px;
+    align-items: center;
+    height: 80%;
+    gap: 20px;
+    p {
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+}
+
+
