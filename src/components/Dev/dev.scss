@@ -5,6 +5,8 @@
   width: 80%;
 
   .more-details {
+    width: fit-content; 
+    height: 60px;
     font-size: 60px;
     color: $primary-color;
     display: flex;
