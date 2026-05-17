@@ -6,6 +6,7 @@ import CloudCard from "../../components/Card/CloudCard/CloudCard";
 import AwsScroll from "../Animation/AwsScroll/AwsScroll";
 import { FaArrowRight } from "react-icons/fa6";
 import { CiCirclePlus } from "react-icons/ci";
+import { IoIosArrowUp } from "react-icons/io";
 import { IoIosArrowDown } from "react-icons/io";
 
 import HeaderAnimation from "../Animation/HeaderAnimation";
@@ -17,11 +18,60 @@ import hcta from "../../assets/cert-badge/HCTA0-004.png";
 import knca from "../../assets/cert-badge/KCNA.webp";
 import saa from "../../assets/cert-badge/SAA-C03.png";
 import sap from "../../assets/cert-badge/SAP-C02.png";
+import { useState } from "react";
 
+const cloudProjects: any[] = [
+  {
+    title: "gtyutgg",
+    description: "fgyttttttttttftrh rtytry  yyyyyyyytytyty",
+    href: "",
+    src: clf,
+  },
+  {
+    title: "gtyutgg",
+    description: "fgyttttttttttftrh rtytry  yyyyyyyytytyty",
+    href: "",
+    src: clf,
+  },
+  {
+    title: "gtyutgg",
+    description: "fgyttttttttttftrh rtytry  yyyyyyyytytyty",
+    href: "",
+    src: clf,
+  },
+  {
+    title: "gtyutgg",
+    description: "fgyttttttttttftrh rtytry  yyyyyyyytytyty",
+    href: "",
+    src: clf,
+  },
+  {
+    title: "gtyutgg",
+    description: "fgyttttttttttftrh rtytry  yyyyyyyytytyty",
+    href: "",
+    src: clf,
+  },
+  {
+    title: "gtyutgg",
+    description: "fgyttttttttttftrh rtytry  yyyyyyyytytyty",
+    href: "",
+    src: clf,
+  },
+];
 
 const Cloud = () => {
+  const initialCards: number = 3;
+  const [visibleCount, setVisibleCount] = useState(initialCards);
+  const showMoreCards = () => {
+    setVisibleCount((prev) => prev + 3);
+  };
+  const showLessCards = () => {
+    setVisibleCount(initialCards);
+  };
 
-  // const cloudProjects: any[] = ["</>", "</>", "</>", "</>", "</>"];
+  const visibleCloudProjects = cloudProjects.slice(0, visibleCount);
+  const moreCards = visibleCount < cloudProjects.length;
+
   return (
     <div className="cloud-container">
       <h2>
@@ -174,27 +224,29 @@ const Cloud = () => {
       </h3>
       <div className="project-container">
         <div className="project-card-container">
-          
-          <CloudCard
-            title="Vghtgyhh"
-            description="lorem 10ffffffffffffffffffff"
-            img={clf}
-          />
-          <CloudCard
-            title="Vghtgyhh"
-            description="lorem 10ffffffffffffffffffff"
-            img={clf} 
-          />
-          <CloudCard
-            title="Vghtgyhh"
-            description="lorem 10ffffffffffffffffffff"
-            img={clf}
-          />
+          {visibleCloudProjects.map((cloudProject, index) => (
+            <CloudCard
+              key={index}
+              title={cloudProject.title}
+              description={cloudProject.description}
+              img={cloudProject.src}
+              href={cloudProject.href}
+            />
+          ))}
         </div>
-        <button className="show-card">
-          Show more
-          <IoIosArrowDown className="show-card-icon" />
-        </button>
+        {moreCards ? (
+          <button className="show-card" onClick={showMoreCards}>
+            Show more
+            <IoIosArrowDown className="show-card-icon" />
+          </button>
+        ) : (
+          cloudProjects.length > initialCards && (
+            <button className="show-card" onClick={showLessCards}>
+              Show less
+              <IoIosArrowUp className="show-card-icon rotate" />
+            </button>
+          )
+        )}
       </div>
     </div>
   );

@@ -245,8 +245,8 @@
     gap: 50px;
     .project-card-container {
       display: flex;
-      justify-content: space-around;
-      gap:30px;
+      justify-content: center;
+      gap: 50px;
       flex-wrap: wrap;
     }
 
@@ -278,7 +278,7 @@
         );
       }
 
-       .show-card-icon {
+      .show-card-icon {
         visibility: hidden;
         opacity: 0;
         width: 0px;
@@ -286,7 +286,7 @@
         justify-content: center;
         transition: all 0.3s ease;
       }
-     
+
       &:hover .show-card-icon {
         width: 25px;
         visibility: visible;

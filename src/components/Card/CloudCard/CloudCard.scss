@@ -1,7 +1,7 @@
 @use "../../../index.scss" as *;
 .cloud-card {
   height: 300px;
-  width: 260px;
+  width:300px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -10,7 +10,6 @@
   background-color: #fff;
   cursor: pointer;
   overflow: hidden;
-  
    transition:
     box-shadow 0.3s ease;
 

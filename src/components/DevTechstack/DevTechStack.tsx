@@ -127,18 +127,6 @@ const DevTechStack = ({handleClose}: {handleClose: () => void}) => {
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" />
               <p>Linux</p>
             </div>
-            <div className="dev-stack-logo">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
-              <p>React</p>
-            </div>
-            <div className="dev-stack-logo">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
-              <p>React</p>
-            </div>
-            <div className="dev-stack-logo">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
-              <p>React</p>
-            </div>
           </div>
         </div>
       </div>
