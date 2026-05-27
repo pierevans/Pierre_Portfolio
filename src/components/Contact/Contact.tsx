@@ -7,8 +7,7 @@ import TitleAnimation from "../Animation/TitleAnimation";
 
 const Contact = () => {
   return (
-    
-    <div className="contact-card" id="contact">
+    <section className="contact-card" id="contact">
       <h2>
         <HeaderAnimation headline="Get In Touch" />
       </h2>
@@ -25,7 +24,7 @@ const Contact = () => {
           <img src={Image} alt="cloud" />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

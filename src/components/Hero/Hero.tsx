@@ -6,7 +6,7 @@ import { GrDownload } from "react-icons/gr";
 import myPicture from "../../assets/—Pngtree—man in shirt smiles and_13146336.png";
 const Hero = () => {
   return (
-    <div className="hero-container" id="home">
+    <section className="hero-container" id="home">
       {/* <div className="hero-icon">
         <div className="icon">
           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
@@ -133,7 +133,7 @@ const Hero = () => {
         </svg>
         <img src={myPicture} alt="My Picture" />
       </div>
-    </div>
+    </section>
   );
 };
 

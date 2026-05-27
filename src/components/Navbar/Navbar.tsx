@@ -1,73 +1,105 @@
 import "./Navbar.scss";
-import { MdConnectWithoutContact } from "react-icons/md";
-import { MdDescription } from "react-icons/md";
+import { MdConnectWithoutContact, MdDescription } from "react-icons/md";
 import { TbCloudComputing } from "react-icons/tb";
 import { SiDevbox } from "react-icons/si";
 import { FaHome } from "react-icons/fa";
 import { useEffect, useState } from "react";
 
 const Navbar = () => {
-  const [move, setMove] = useState(false);
-  const toggle = () => setMove(!move);
+  const [move, setMove] = useState<boolean>(false);
+  const [navbar, setNavbar] = useState<boolean>(false);
+  const [links, setLinks] = useState<boolean>(false);
+  const [activeSection, setActiveSection] = useState<string>("home");
 
-  const [navbar, setNavbar] = useState(false);
-  const [links, setLinks] = useState(false);
+  const toggle = () => setMove((prev) => !prev);
 
   useEffect(() => {
-    const changeBackground = () => {
-      if (window.scrollY >= 80) {
+    const sectionIds = ["home", "cloud", "dev", "about", "contact"];
+
+    const handleScroll = () => {
+      const currentYScroll = window.scrollY;
+
+      if (currentYScroll >= 80) {
         setNavbar(true);
         setLinks(true);
       } else {
         setNavbar(false);
         setLinks(false);
       }
+
+      sectionIds.forEach((id) => {
+        const section = document.getElementById(id);
+        if (!section) return;
+
+        const sectionTop = section.offsetTop - 120;
+        const sectionHeight = section.offsetHeight;
+
+        if (
+          currentYScroll >= sectionTop &&
+          currentYScroll < sectionTop + sectionHeight
+        ) {
+          setActiveSection(id);
+        }
+      });
     };
-    window.addEventListener("scroll", changeBackground);
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
 
     return () => {
-      window.removeEventListener("scroll", changeBackground);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   return (
     <div className="header">
-      <nav className={navbar? "navbar active": "navbar"}>
+      <nav className={navbar ? "navbar active" : "navbar"}>
         <div className="nav-logo">
           <h3>
-            <a href="">PK</a>
+            <a href="#home">PK</a>
           </h3>
         </div>
-        <ul className={links? "nav-links active": "nav-links"}>
+
+        <ul className={links ? "nav-links active" : "nav-links"}>
           <li>
-            <a href="#home">
+            <a href="#home" className={activeSection === "home" ? "active" : ""}>
               <FaHome />
               Home
             </a>
           </li>
+
           <li>
-            <a href="#cloud">
+            <a href="#cloud" className={activeSection === "cloud" ? "active" : ""}>
               <TbCloudComputing />
               Cloud
             </a>
           </li>
+
           <li>
-            <a href="#dev">
-              <SiDevbox /> Dev
+            <a href="#dev" className={activeSection === "dev" ? "active" : ""}>
+              <SiDevbox />
+              Dev
             </a>
           </li>
+
           <li>
-            <a href="#about">
-              <MdDescription /> About
+            <a href="#about" className={activeSection === "about" ? "active" : ""}>
+              <MdDescription />
+              About
             </a>
           </li>
+
           <li>
-            <a href="#contact">
+            <a
+              href="#contact"
+              className={activeSection === "contact" ? "active" : ""}
+            >
               <MdConnectWithoutContact />
               Reach Out
             </a>
           </li>
         </ul>
+
         <div className="theme" onClick={toggle}>
           <div className={move ? "btn-theme active" : "btn-theme"}></div>
         </div>

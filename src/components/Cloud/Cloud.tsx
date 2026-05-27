@@ -73,7 +73,7 @@ const Cloud = () => {
   const moreCards = visibleCount < cloudProjects.length;
 
   return (
-    <div className="cloud-container" id="cloud">
+    <section className="cloud-container" id="cloud">
       <h2>
         <HeaderAnimation headline="Cloud Skills" />
       </h2>
@@ -248,7 +248,7 @@ const Cloud = () => {
           )
         )}
       </div>
-    </div>
+    </section>
   );
 };
 

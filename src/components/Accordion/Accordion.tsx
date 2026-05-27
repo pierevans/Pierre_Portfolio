@@ -15,7 +15,7 @@ const Accordion = () => {
     setClicked(i);
   };
   return (
-    <div className="accordion-container" id="about">
+    <section className="accordion-container" id="about">
       <h2>
         <HeaderAnimation headline="More About Me" />
       </h2>
@@ -34,7 +34,7 @@ const Accordion = () => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

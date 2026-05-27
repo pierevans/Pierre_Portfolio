@@ -15,7 +15,7 @@ const Dev = () => {
   };
 
   return (
-    <div className="dev-container" id="dev">
+    <section className="dev-container" id="dev">
       <h2>
         <HeaderAnimation headline="Software Development" />
       </h2>
@@ -34,7 +34,7 @@ const Dev = () => {
       <h3>
         <TitleAnimation title="Dev projects" />
       </h3>
-    </div>
+    </section>
   );
 };
 
