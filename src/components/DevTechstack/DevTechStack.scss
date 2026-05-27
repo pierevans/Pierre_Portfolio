@@ -11,7 +11,7 @@
     flex-direction: column;
     justify-content: space-around;
     position: fixed;
-    overflow: scroll;
+    overflow: auto;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -19,7 +19,6 @@
     width: 80%;
     height: 600px;
     padding: 30px 100px;
-    overlay: hidden;
     h3 {
       display: flex;
       align-items: center;

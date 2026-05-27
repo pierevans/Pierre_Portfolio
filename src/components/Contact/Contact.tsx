@@ -8,7 +8,7 @@ import TitleAnimation from "../Animation/TitleAnimation";
 const Contact = () => {
   return (
     
-    <div className="contact-card">
+    <div className="contact-card" id="contact">
       <h2>
         <HeaderAnimation headline="Get In Touch" />
       </h2>

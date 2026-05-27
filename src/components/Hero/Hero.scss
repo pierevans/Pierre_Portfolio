@@ -76,12 +76,12 @@
 
     .hero-btn {
       margin-top: 50px;
-      width: 310px;
+      width: 415px;
       display: flex;
       justify-content: space-between;
       button {
-        width: 150px;
-        height: 40px;
+        width: 200px;
+        height: 50px;
         border-radius: 40px;
         font-size: 18px;
         font-weight: 500;
@@ -93,11 +93,15 @@
           border: none;
           transition: all 0.3s ease;
           &:hover {
-            background-color: darken($primary-color, 10%);
+            background-color: darken($primary-color, 15%);
           }
         }
         &:nth-child(2) {
           position: relative;
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
           background-color: $bg-color;
           color: $text-color;
           border: none;
@@ -141,14 +145,15 @@
 
     img {
       position: absolute;
-      width: 90%;
-      height: 90%;
+      width: 80%;
+      height: 80%;
       object-fit: contain;
       border-radius: 20px;
       z-index: 10;
       left: 50%;
       top: 40%;
       transform: translate(-50%, -50%);
+      mask-image: linear-gradient(to bottom, black 70%, transparent);
       
     }
   }

@@ -40,29 +40,29 @@ const Navbar = () => {
         </div>
         <ul className={links? "nav-links active": "nav-links"}>
           <li>
-            <a href="">
+            <a href="#home">
               <FaHome />
               Home
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="#cloud">
               <TbCloudComputing />
               Cloud
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="#dev">
               <SiDevbox /> Dev
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="#about">
               <MdDescription /> About
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="#contact">
               <MdConnectWithoutContact />
               Reach Out
             </a>

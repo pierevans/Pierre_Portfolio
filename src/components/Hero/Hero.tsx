@@ -1,10 +1,12 @@
 import "./Hero.scss";
 import { BsCode } from "react-icons/bs";
 import { BsCodeSlash } from "react-icons/bs";
+import { GrDownload } from "react-icons/gr";
+
 import myPicture from "../../assets/—Pngtree—man in shirt smiles and_13146336.png";
 const Hero = () => {
   return (
-    <div className="hero-container">
+    <div className="hero-container" id="home">
       {/* <div className="hero-icon">
         <div className="icon">
           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
@@ -64,7 +66,7 @@ const Hero = () => {
         </p>
         <div className="hero-btn">
           <button>Contact Me</button>
-          <button>Download CV</button>
+          <button>Download CV <GrDownload  /></button>
         </div>
       </div>
       <div className="hero-img">
