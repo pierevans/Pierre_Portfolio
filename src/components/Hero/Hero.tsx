@@ -2,16 +2,121 @@ import "./Hero.scss";
 import { BsCode } from "react-icons/bs";
 import { BsCodeSlash } from "react-icons/bs";
 import { GrDownload } from "react-icons/gr";
-
+import { motion } from "framer-motion";
 import myPicture from "../../assets/—Pngtree—man in shirt smiles and_13146336.png";
 const Hero = () => {
+  const iconVariants = [
+    {
+      name: "React",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+      color: "#61DAFB",
+      top: "8%",
+      left: "42%",
+      width: "50px",
+    },
+    {
+      name: "JavaScript",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
+      color: "#F7DF1E",
+      top: "28%",
+      left: "32%",
+      width: "60px",
+    },
+    {
+      name: "TypeScript",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+      color: "#3178C6",
+      top: "82%",
+      left: "8%",
+      width: "60px",
+    },
+    {
+      name: "AWS",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
+      color: "#FF9900",
+      top: "13%",
+      left: "18%",
+      width: "80px",
+    },
+    {
+      name: "Terraform",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/terraform/terraform-original.svg",
+      color: "#844FBA",
+      top: "10%",
+      left: "60%",
+      width: "60px",
+    },
+    {
+      name: "Kubernetes",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-original.svg",
+      color: "#326CE5",
+      top: "70%",
+      left: "55%",
+      width: "65px",
+    },
+    {
+      name: "Docker",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg",
+      color: "#2496ED",
+      top: "78%",
+      left: "28%",
+      width: "80px",
+    },
+    {
+      name: "Linux",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg",
+      color: "#FCC624",
+      top: "82%",
+      left: "75%",
+      width: "50px",
+    },
+    {
+      name: "Python",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
+      color: "#3776AB",
+      top: "25%",
+      left: "53%",
+      width: "65px",
+    },
+    {
+      name: "Jenkins",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-original.svg",
+      color: "#EF7B4D",
+      top: "12%",
+      left: "88%",
+      width: "60px",
+    },
+  ];
+
   return (
     <section className="hero-container" id="home">
-      {/* <div className="hero-icon">
-        <div className="icon">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
-        </div>
-      </div> */}
+      <div className="hero-icon">
+        {iconVariants.map((icon, index) => (
+          <motion.div
+            key={index}
+            className="floating-icon"
+            style={{
+              top: icon.top,
+              left: icon.left,
+              width: icon.width,
+              backgroundColor: `${icon.color}40`,
+            }}
+
+            animate={{
+              y: [0, -10, 0],
+              x: [0, 10, 0], 
+            }}
+            transition={{
+              duration: 10,
+              repeat: Infinity,
+              repeatType: "loop",
+              delay: index * 0.5,
+            }}
+          >
+            <img src={icon.img} alt={icon.name} />
+          </motion.div>
+        ))}{" "}
+      </div>
       <div className="blob1">
         <svg
           id="10015.io"
@@ -66,7 +171,9 @@ const Hero = () => {
         </p>
         <div className="hero-btn">
           <button>Contact Me</button>
-          <button>Download CV <GrDownload  /></button>
+          <button>
+            Download CV <GrDownload />
+          </button>
         </div>
       </div>
       <div className="hero-img">

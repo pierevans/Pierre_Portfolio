@@ -8,15 +8,21 @@
   width: 80%;
   margin: 0 auto;
   height: 800px;
-  hero-icon {
+
+  .hero-icon {
     position: absolute;
     width: 100%;
-
-    .icon {
-      width: 50px;
-      img {
-        width: 50%;
-      }
+    height: 100%;
+    z-index: -100;
+    .floating-icon {
+      position: absolute;
+      display: flex;
+      align-items: center;  
+      justify-content: center;
+      width: fit-content;
+      height: fit-content;
+      padding: 10px;
+      border-radius: 10px;
     }
   }
 
@@ -54,6 +60,7 @@
     width: 100%;
     height: 600px;
     display: flex;
+    margin-left: 30px;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
