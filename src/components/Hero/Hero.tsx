@@ -101,13 +101,12 @@ const Hero = () => {
               width: icon.width,
               backgroundColor: `${icon.color}40`,
             }}
-
             animate={{
               y: [0, -10, 0],
-              x: [0, 10, 0], 
+              x: [0, 10, 0],
             }}
             transition={{
-              duration: 10,
+              duration: 5,
               repeat: Infinity,
               repeatType: "loop",
               delay: index * 0.5,
@@ -238,7 +237,14 @@ const Hero = () => {
             fill="#8844f8"
           ></path>
         </svg>
-        <img src={myPicture} alt="My Picture" />
+        <motion.img
+          src={myPicture}
+          alt="My Picture"
+          drag
+          dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
+          dragElastic={0.2}
+          dragSnapToOrigin
+        />
       </div>
     </section>
   );
