@@ -3,7 +3,7 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 
 
-// import {motion} from "framer-motion";
+import {motion} from "framer-motion";
 
 interface Props {
   img: any;
@@ -15,7 +15,7 @@ interface Props {
 
 const DevCard = ({ img, title, description, hrefOne, hrefTwo }: Props) => {
   return (
-    <div className="dev-card">
+    <motion.div className="dev-card">
       <img src={img} alt={title} />
       <div className="dev-project">
         <h4>{title}</h4>
@@ -29,7 +29,7 @@ const DevCard = ({ img, title, description, hrefOne, hrefTwo }: Props) => {
           </a>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

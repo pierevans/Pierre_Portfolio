@@ -132,36 +132,42 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 const projects = [
   {
+    img: "https://static01.nyt.com/images/2019/04/16/sports/16onsoccerweb-2/merlin_153612873_5bb119b9-8972-4087-b4fd-371cab8c5ba2-articleLarge.jpg?quality=75&auto=webp&disable=upscale",
     title: "Project 1",
     description: "Description of project 1.",
     hrefOne: "#",
     hrefTwo: "#",
   },
   {
+    img: "https://media.gettyimages.com/id/2233760409/photo/buenos-aires-argentina-lionel-messi-of-argentina-celebrates-after-scoring-the-teams-third.jpg?s=612x612&w=gi&k=20&c=9vqzYwOG2YtiF40CQycFETIJLEjd1nbvSIrPAmOLouQ=",
     title: "Project 2",
     description: "Description of project 2.",
     hrefOne: "#",
     hrefTwo: "#",
   },
   {
+    img: "https://static01.nyt.com/images/2019/04/16/sports/16onsoccerweb-2/merlin_153612873_5bb119b9-8972-4087-b4fd-371cab8c5ba2-articleLarge.jpg?quality=75&auto=webp&disable=upscale",
     title: "Project 3",
     description: "Description of project 3.",
     hrefOne: "#",
     hrefTwo: "#",
   },
   {
+    img: "https://static01.nyt.com/images/2019/04/16/sports/16onsoccerweb-2/merlin_153612873_5bb119b9-8972-4087-b4fd-371cab8c5ba2-articleLarge.jpg?quality=75&auto=webp&disable=upscale",
     title: "Project 4",
     description: "Description of project 4.",
     hrefOne: "#",
     hrefTwo: "#",
   },
   {
+    img: "https://static01.nyt.com/images/2019/04/16/sports/16onsoccerweb-2/merlin_153612873_5bb119b9-8972-4087-b4fd-371cab8c5ba2-articleLarge.jpg?quality=75&auto=webp&disable=upscale",
     title: "Project 5",
     description: "Description of project 5.",
     hrefOne: "#",
     hrefTwo: "#",
   },
   {
+    img: "https://static01.nyt.com/images/2019/04/16/sports/16onsoccerweb-2/merlin_153612873_5bb119b9-8972-4087-b4fd-371cab8c5ba2-articleLarge.jpg?quality=75&auto=webp&disable=upscale",
     title: "Project 6",
     description: "Description of project 6.",
     hrefOne: "#",
@@ -215,6 +221,7 @@ const Dev = () => {
       <div className="dev-card-container">
         {orderedProjects.map((project) => (
           <DevCard
+            img={project.img }
             key={project.title}
             title={project.title}
             description={project.description}
@@ -225,13 +232,8 @@ const Dev = () => {
         ))}
 
         <div className="change-btn">
-          <button type="button" onClick={handlePrev}>
-            <IoIosArrowBack />
-          </button>
-
-          <button type="button" onClick={handleNext}>
-            <IoIosArrowForward />
-          </button>
+            <IoIosArrowBack className="prev" onClick={handlePrev}/>
+            <IoIosArrowForward className="next" onClick={handleNext}/>
         </div>
       </div>
     </section>
