@@ -5,7 +5,7 @@
   width: 80%;
 
   .more-details {
-    width: fit-content; 
+    width: fit-content;
     height: 60px;
     font-size: 60px;
     color: $primary-color;
@@ -13,7 +13,7 @@
     align-items: center;
     justify-content: center;
     transition: transform 0.3s ease;
-    margin: 50px auto 50px ;
+    margin: 50px auto 50px;
     cursor: pointer;
     &:hover {
       cursor: pointer;
@@ -21,6 +21,51 @@
     }
     &:active {
       transform: scale(0.95);
+    }
+  }
+
+  .dev-card-container {
+    position: relative;
+    height: 500px;
+    width: 80%;
+    margin: 50px 0;
+    border-radius: 20px;
+    box-shadow:
+      2px 2px 20px rgba(0, 0, 0, 0.1),
+      -2px -2px 20px rgba(0, 0, 0, 0.1);
+    .change-btn {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 120px;
+      height: 40px;
+      border-radius: 40px;
+      border: none;
+      background-color: #ffff;
+      top: 110%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      &:hover {
+        box-shadow:
+          -1px -1px 20px rgb(124, 47, 247),
+          1px 1px 10px rgb(191, 0, 255),
+          3px 6px 20px rgb(255, 252, 55);
+      }
+
+      .prev,
+      .next {
+        border-radius: 50%;
+        color: $heading-color;
+        font-size: 20px;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+        &:hover {
+          transform: scale(1.3);
+        }
+      }
     }
   }
 }

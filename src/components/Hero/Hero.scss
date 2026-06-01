@@ -17,7 +17,7 @@
     .floating-icon {
       position: absolute;
       display: flex;
-      align-items: center;  
+      align-items: center;
       justify-content: center;
       width: fit-content;
       height: fit-content;
@@ -86,15 +86,15 @@
       width: 415px;
       display: flex;
       justify-content: space-between;
-      button {
-        width: 200px;
-        height: 50px;
-        border-radius: 40px;
-        font-size: 18px;
-        font-weight: 500;
-        cursor: pointer;
+      a {
+        button {
+          width: 200px;
+          height: 50px;
+          border-radius: 40px;
+          font-size: 18px;
+          font-weight: 500;
+          cursor: pointer;
 
-        &:nth-child(1) {
           background-color: $primary-color;
           color: $bg-color;
           border: none;
@@ -103,43 +103,43 @@
             background-color: darken($primary-color, 15%);
           }
         }
-        &:nth-child(2) {
-          position: relative;
-          display: inline-flex;
-          justify-content: center;
-          align-items: center;
-          gap: 10px;
-          background-color: $bg-color;
-          color: $text-color;
-          border: none;
-          transition: all 0.3s ease;
-          &:hover {
-            background-color: lighten($text-color, 90%);
-          }
+      }
+    }
+    .hero-btn a:nth-child(2) button {
+      position: relative;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      background-color: $bg-color;
+      color: $text-color;
+      border: none;
+      transition: all 0.3s ease;
+      &:hover {
+        background-color: lighten($text-color, 90%);
+      }
 
-          &::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            padding: 1px;
-            border-radius: 40px;
-            background: linear-gradient(
-              to right,
-              rgba(123, 47, 247, 1),
-              rgba(255, 253, 55, 1)
-            );
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        padding: 1px;
+        border-radius: 40px;
+        background: linear-gradient(
+          to right,
+          rgba(123, 47, 247, 1),
+          rgba(255, 253, 55, 1)
+        );
 
-            -webkit-mask:
-              linear-gradient(#fff 0 0) content-box,
-              linear-gradient(#fff 0 0);
-            mask:
-              linear-gradient(#fff 0 0) content-box,
-              linear-gradient(#fff 0 0);
-            -webkit-mask-composite: xor;
-            mask-composite: exclude;
-            pointer-events: none;
-          }
-        }
+        -webkit-mask:
+          linear-gradient(#fff 0 0) content-box,
+          linear-gradient(#fff 0 0);
+        mask:
+          linear-gradient(#fff 0 0) content-box,
+          linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        pointer-events: none;
       }
     }
   }
@@ -169,7 +169,6 @@
       // left: 10%;
       top: 2%;
       mask-image: linear-gradient(to bottom, black 70%, transparent);
-      
     }
   }
 }

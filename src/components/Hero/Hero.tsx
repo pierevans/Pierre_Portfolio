@@ -169,10 +169,14 @@ const Hero = () => {
           architecture, and modern DevOps practices.
         </p>
         <div className="hero-btn">
-          <button>Contact Me</button>
-          <button>
-            Download CV <GrDownload />
-          </button>
+          <a href="#contact">
+            <button>Contact Me</button>
+          </a>
+          <a href="path/to/your/cv.pdf" download="Pierre_CV.pdf">
+            <button>
+              Download CV <GrDownload />
+            </button>
+          </a>
         </div>
       </div>
       <div className="hero-img">

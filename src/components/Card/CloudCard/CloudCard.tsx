@@ -11,9 +11,9 @@ interface Props {
 const CloudCard = ({ img, title, description, href }: Props) => {
   return (
     <div className="cloud-card">
-        <div className="cloud-image">
-          <img src={img} alt={title} />
-        </div>
+      <div className="cloud-image">
+        {/* <img src={img} alt={title} /> */}
+      </div>
       <div className="cloud-project">
         <h4>{title}</h4>
         <p>{description}</p>
