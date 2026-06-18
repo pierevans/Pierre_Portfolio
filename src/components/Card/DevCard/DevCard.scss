@@ -24,74 +24,7 @@
 //     z-index: -1;
 
 //   }
-//   .dev-project {
-//     position: absolute;
-//     left: 0;
-//     top: 50%;
-//     border-radius: 10px;
-//     transform: translate(0, -50%);
-//     opacity: 0;
-//     visibility: hidden;
-//     transition: all 0.5s ease;
-//     justify-content: space-between;
-//     padding: 0 50px;
-//     h4 {
-//       color: $primary-color;
-//       font-size: 24px;
-//     }
-//     p {
-//       margin: 20px 0 20px;
-//       color: $bg-color;
-//       text-align: justify;
-//     }
-
-//     .dev-btns {
-//       display: flex;
-//       align-items: center;
-//       justify-content: space-between;
-//       width: 310px;
-
-
-//       a {
-//         width: 150px;
-//         display: flex;
-//         align-items: center;
-//         justify-content: space-between;
-//         width: fit-content;
-
-//         button {
-//           cursor: pointer;
-//           display: flex;
-//           align-items: center;
-//           justify-content: center;
-//           gap: 5px;
-//           padding: 10px 20px;
-//           font-size: 16px;
-//           border-radius: 5px;
-//           border: none;
-//           font-weight: 500;
-//           background-color: $primary-color;
-//           color: $bg-color;
-//           border: none;
-//           transition: all 0.3s ease;
-
-//           &:hover {
-//             background-color: darken($primary-color, 15%);
-//           }
-//         }
-//       }
-//     }
-
-//     .dev-btns a:nth-child(2) button {
-//       background-color: #ffff;
-//       color: $primary-color;
-//       border: 1px solid $primary-color;
-//       &:hover {
-//         background-color: lighten($secondary-color, 6%);
-//       }
-//     }
-//   }
-// }
+//
 
 // .dev-card:nth-child(1) {
 //   left: 0;
@@ -164,14 +97,13 @@
 //   z-index: 2;
 // }
 
-
-
 .swiper {
+  position: relative;
   margin: 80px auto 0;
   width: 70%;
   height: 500px;
   transform-style: preserve-3d;
-  border-radius: 20px;
+  overflow: hidden;
 }
 
 .swiper-slide {
@@ -189,20 +121,91 @@
   border-radius: 20px;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-   color: #ffff !important;
-  }
-  
-  .swiper-pagination-bullet {
-    width: 20px;
-    height: 20px;
-    background: #ffff !important;
-    // opacity: 0.4;
+.swiper-pagination {
+  bottom: 25px !important;
+}
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: #ffff !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: $primary-color !important;
+  opacity: 1;
+  transform: scale(1.5);
+}
+
+.dev-card {
+  .dev-project {
+    position: absolute;
+    left: 100px;
+    top: 50%;
+    height: 100%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: all ease-in 0.3s;
+    h4 {
+      color: $primary-color;
+      font-size: 26px !important;
+    }
+    p {
+      margin: 40px 0 50px;
+      color: $bg-color;
+      text-align: justify;
+      font-size: 20px !important;
+    }
+    .dev-btns {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 280px;
+
+      a {
+        width: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: fit-content;
+
+        button {
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 5px;
+          padding: 10px 20px;
+          font-size: 16px;
+          border-radius: 5px;
+          border: none;
+          font-weight: 500;
+          background-color: $primary-color;
+          color: $bg-color;
+          border: none;
+          transition: all 0.3s ease;
+
+          &:hover {
+            background-color: darken($primary-color, 15%);
+          }
+        }
+      }
+    }
+
+    .dev-btns a:nth-child(2) button {
+      background-color: #ffff;
+      color: $primary-color;
+      border: 1px solid $primary-color;
+      &:hover {
+        background-color: lighten($secondary-color, 6%);
+      }
+    }
   }
 
-  .swiper-pagination-bullet-active {
-    background: $primary-color !important;
+  .dev-project:hover {
     opacity: 1;
-    transform: scale(1.5);
   }
+}
