@@ -1,14 +1,13 @@
 @use "../../../index.scss" as *;
 .cloud-card {
-  height: 300px;
-  width:300px;
+  height: 400px;
+  width: 345px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
   border-radius: 20px;
   background-color: #fff;
-  cursor: pointer;
   overflow: hidden;
    transition:
     box-shadow 0.3s ease;
@@ -23,7 +22,7 @@
   .cloud-image {
     border-radius: 20px;
     width: 100%;
-    flex-basis: 50%;
+    flex-basis: 70%;
     background-color: aquamarine;
     overflow: hidden;
     img {
@@ -72,7 +71,7 @@
     }
   }
   &:hover .arrow-icon h4 {
-    max-width: 60px;
+    max-width: 120px;
     opacity: 1;
     transform: translateX(0px);
   }
