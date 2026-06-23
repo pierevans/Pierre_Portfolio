@@ -1,14 +1,12 @@
 @use "../../../index.scss" as *;
 .cloud-card {
-  height: 400px;
+  height: 450px;
   width: 345px;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
   flex-direction: column;
   border-radius: 20px;
-  background-color: #fff;
-  overflow: hidden;
+  background-color: #ffff;
    transition:
     box-shadow 0.3s ease;
 
@@ -22,18 +20,18 @@
   .cloud-image {
     border-radius: 20px;
     width: 100%;
-    flex-basis: 70%;
-    background-color: aquamarine;
+    flex-basis: 60%;
     overflow: hidden;
+
     img {
       width: 100%;
       height: 100%;
-      object-fit: contain;
+      object-fit: fill;
       transition: scale 0.3s ease;
     }
   }
     &:hover img {
-    scale: 1.1;
+    scale: 1.03;
   }
 
   .cloud-project {
@@ -46,31 +44,45 @@
     align-items: flex-start;
     h4 {
       font-weight: bold;
+      color: $primary-color;
     }
     p {
-      margin: 10px 0 20px;
       font-size: 14px;
+      overflow-y: scroll;
+      height: 40px;
+      padding: 0px 5px;
+      margin: 20px 0;
+      height: 60px;
     }
     .arrow-icon {
       display: flex;
       align-items: center;
       justify-content: flex-start;
       gap: 5px;
-
-      h4 {
+      color: $heading-color;
+      font-size: 18px;
+      font-weight: 500;
+      &:hover {
+        color: $primary-color;
+      }
+      &:active {
+        color: rgb(241, 241, 25);
+      }
+      span {
         max-width: 0;
         opacity: 0;
         white-space: nowrap;
         transform: translateX(-5px);
         overflow: hidden;
         transition:
-          max-width 0.3s ease-in-out,
-          opacity 0.3s ease-in-out,
-          transform 0.3s ease-in-out;
+        max-width 0.3s ease-in-out,
+        opacity 0.3s ease-in-out,
+        transform 0.3s ease-in-out;
+          
       }
     }
   }
-  &:hover .arrow-icon h4 {
+  &:hover .arrow-icon span {
     max-width: 120px;
     opacity: 1;
     transform: translateX(0px);

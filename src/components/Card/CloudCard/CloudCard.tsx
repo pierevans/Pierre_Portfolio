@@ -17,8 +17,13 @@ const CloudCard = ({ img, title, description, href }: Props) => {
       <div className="cloud-project">
         <h4>{title}</h4>
         <p>{description}</p>
-        <a href={href} className="arrow-icon">
-          <h4>GitHub Link</h4>
+        <a
+          href={href}
+          className="arrow-icon"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span>GitHub Link</span>
           <FaArrowRight />
         </a>
       </div>

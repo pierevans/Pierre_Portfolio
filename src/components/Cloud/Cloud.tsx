@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import "../../index.scss";
 import "./Cloud.scss";
 import CloudCard from "../../components/Card/CloudCard/CloudCard";
+import cloudProjects from "./ProjectLists"
+
 
 import AwsScroll from "../Animation/AwsScroll/AwsScroll";
 import { FaArrowRight } from "react-icons/fa6";
@@ -20,50 +22,6 @@ import saa from "../../assets/cert-badge/SAA-C03.png";
 import sap from "../../assets/cert-badge/SAP-C02.png";
 import { useState } from "react";
 
-const cloudProjects: any[] = [
-  {
-    title: "project 1",
-    description: "fgyttttttttttftrh rtytry  yyyyyyyytytyty",
-    href: "",
-    src: clf,
-    level: "hard",
-  },
-  {
-    title: "project 2",
-    description: "fgyttttttttttftrh rtytry  yyyyyyyytytyty",
-    href: "",
-    src: clf,
-    level: "medium",
-  },
-  {
-    title: "project 3",
-    description: "fgyttttttttttftrh rtytry  yyyyyyyytytyty",
-    href: "",
-    src: clf,
-    level: "easy",
-  },
-  {
-    title: "project 4",
-    description: "fgyttttttttttftrh rtytry  yyyyyyyytytyty",
-    href: "",
-    src: clf,
-    level: "hard",
-  },
-  {
-    title: "project 5",
-    description: "fgyttttttttttftrh rtytry  yyyyyyyytytyty",
-    href: "",
-    src: clf,
-    level: "medium",
-  },
-  {
-    title: "project 6",
-    description: "fgyttttttttttftrh rtytry  yyyyyyyytytyty",
-    href: "",
-    src: clf,
-    level: "hard",
-  },
-];
 
 const Cloud = () => {
   const initialCards: number = 3;
@@ -265,7 +223,6 @@ const Cloud = () => {
               description={cloudProject.description}
               img={cloudProject.src}
               href={cloudProject.href}
-              // level={cloudProject.level}
             />
           ))}
         </div>
