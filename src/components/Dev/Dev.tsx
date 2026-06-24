@@ -128,7 +128,6 @@ import DevTechStack from "../DevTechstack/DevTechStack";
 import DevCard from "../Card/DevCard/DevCard";
 import { motion } from "framer-motion";
 import { CiCirclePlus } from "react-icons/ci";
-import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 const Dev = () => {
   const [techStack, setTechStack] = useState(false);
@@ -149,7 +148,7 @@ const Dev = () => {
         className="more-details"
         onClick={() => setTechStack((prev) => !prev)}
       >
-        <CiCirclePlus />
+        <CiCirclePlus className="more-details"/>
       </motion.div>
 
       {techStack && <DevTechStack handleClose={() => setTechStack(false)} />}
@@ -157,23 +156,7 @@ const Dev = () => {
       <h3>
         <TitleAnimation title="Dev projects" />
       </h3>
-
-      {/* <div className="dev-card-container">
-        <DevCard
-        // img={project.img }
-        // key={project.title}
-        // title={project.title}
-        // description={project.description}
-        // hrefOne={project.hrefOne}
-        // hrefTwo={project.hrefTwo}
-        // // className={`card-position-${index + 1}`}
-        />
-
-        <div className="change-btn">
-            <IoIosArrowBack className="prev" onClick={handlePrev}/>
-            <IoIosArrowForward className="next" onClick={handleNext}/>
-        </div>
-      </div> */}
+      
       <DevCard/>
     </section>
   );

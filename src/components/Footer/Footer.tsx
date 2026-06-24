@@ -7,7 +7,9 @@ import ScrambleText from "./ScrambleText";
 
 const Footer = () => {
   return (
-    <div className="Footer">
+    <div className="footer">
+      <img className="footer-logo-1" src="/aws_logo_footer.png" alt="aws-logo" />
+      <img className="footer-logo-2" src="/aws_logo_footer.png" alt="aws-logo" />
       <div className="footer-links">
         <a href="" target="_blank">
           <IoLogoLinkedin />
