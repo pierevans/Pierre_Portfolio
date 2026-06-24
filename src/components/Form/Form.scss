@@ -6,7 +6,7 @@
   justify-content: space-around;
   flex-direction: column;
   position: relative;
-  height: 300px;
+  height: 400px;
   padding: 30px 0;
   input {
     width: 300px;
@@ -22,7 +22,21 @@
       opacity: 0;
     }
   }
-
+  textarea {
+    overflow-y: auto;
+    width: 300px;
+    height: 100px;
+    border-radius: 0px;
+    font-size: 16px;
+    padding: 5px 10px;
+    border: 1px solid $text-color;
+     &:focus {
+      outline: 2px solid $primary-color;
+    }
+    &:focus::placeholder {
+      opacity: 0;
+    }
+  }
   .btn-mail {
     display: inline-flex;
     font-size: 18px;
@@ -69,18 +83,7 @@
       opacity: 1;
       transform: translateX(0px);
     }
-    // &:active span {
-    //   opacity: 1;
-    //   animation: move 2s ease;
-    // }
-    // @keyframes move {
-    //   0% {
-    //     transform: translateY(10px);
-    //   }
-    //   100% {
-    //     transform: translate(100px -100px);
-    //   }
-    // }
+
   }
 }
 .error-message {
