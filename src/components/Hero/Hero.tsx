@@ -109,7 +109,7 @@ const Hero = () => {
               x: [0, 10, 0],
             }}
             transition={{
-              delay: .6,
+              delay: .8,
               x: {
                 duration: 5,
                 repeat: Infinity,
@@ -169,7 +169,7 @@ const Hero = () => {
       </div>
       <motion.div
         className="hero-content"
-        initial={{ opacity: 0, x: -10 }}
+        initial={{ opacity: 0, x: -20 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         transition={{
@@ -202,7 +202,7 @@ const Hero = () => {
       </motion.div>
       <motion.div
         className="hero-img"
-        initial={{ opacity: 0, x: 10 }}
+        initial={{ opacity: 0, x: 20 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         transition={{

@@ -29,6 +29,7 @@ const Feedback = () => {
         onClick={() => showFeedbackCard()}
       >
         <MdFeedback className="feedback-btn" />
+        <div className="feedback-text">Feedback</div>
       </div>
       {feedbackCard && <FeedbackCard handleClose={() => setFeedbackCard(false)}/>}
     </>
