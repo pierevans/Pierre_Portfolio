@@ -101,15 +101,27 @@ const Hero = () => {
               width: icon.width,
               backgroundColor: `${icon.color}40`,
             }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
             animate={{
               y: [0, -10, 0],
               x: [0, 10, 0],
             }}
             transition={{
-              duration: 5,
-              repeat: Infinity,
-              repeatType: "loop",
-              delay: index * 0.5,
+              delay: .6,
+              x: {
+                duration: 5,
+                repeat: Infinity,
+                repeatType: "loop",
+                delay: index * 0.5,
+              },
+              y: {
+                duration: 5,
+                repeat: Infinity,
+                repeatType: "loop",
+                delay: index * 0.5,
+              },
             }}
           >
             <img src={icon.img} alt={icon.name} />
@@ -155,7 +167,16 @@ const Hero = () => {
           />
         </svg>
       </div>
-      <div className="hero-content">
+      <motion.div
+        className="hero-content"
+        initial={{ opacity: 0, x: -10 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{
+          delay: 0.3,
+          duration: 0.5,
+        }}
+      >
         <h4>Hi, I'm Pierre</h4>
         <h1>
           <BsCode />
@@ -178,8 +199,17 @@ const Hero = () => {
             </button>
           </a>
         </div>
-      </div>
-      <div className="hero-img">
+      </motion.div>
+      <motion.div
+        className="hero-img"
+        initial={{ opacity: 0, x: 10 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{
+          delay: 0.3,
+          duration: 0.5,
+        }}
+      >
         <svg
           viewBox="0 0 100 100"
           xmlns="http://www.w3.org/2000/svg"
@@ -249,7 +279,7 @@ const Hero = () => {
           dragElastic={0.2}
           dragSnapToOrigin
         />
-      </div>
+      </motion.div>
     </section>
   );
 };

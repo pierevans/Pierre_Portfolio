@@ -215,7 +215,19 @@ const Cloud = () => {
             Hard
           </button>
         </div>
-        <div className="project-card-container">
+        <motion.div className="project-card-container"
+          initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            variants={{
+              hidden: {},
+              show: {
+                transition: {
+                  staggerChildren: 0.15,
+                },
+              },
+            }}
+        >
           {visibleCloudProjects.map((cloudProject, index) => (
             <CloudCard
               key={index}
@@ -225,7 +237,7 @@ const Cloud = () => {
               href={cloudProject.href}
             />
           ))}
-        </div>
+        </motion.div>
         {moreCards ? (
           <button className="show-card" onClick={showMoreCards}>
             Show more
