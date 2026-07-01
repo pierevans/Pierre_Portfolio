@@ -6,12 +6,13 @@ import { FaHome } from "react-icons/fa";
 import { useEffect, useState } from "react";
 
 const Navbar = () => {
-  const [move, setMove] = useState<boolean>(false);
+  // const [move, setMove] = useState<boolean>(false);
   const [navbar, setNavbar] = useState<boolean>(false);
   const [links, setLinks] = useState<boolean>(false);
+  // const [theme, setTheme] = useState<string>("light");
   const [activeSection, setActiveSection] = useState<string>("home");
 
-  const toggle = () => setMove((prev) => !prev);
+  // const toggle = () => setMove((prev) => !prev);
 
   useEffect(() => {
     const sectionIds = ["home", "cloud", "dev", "about", "contact"];
@@ -62,14 +63,20 @@ const Navbar = () => {
 
         <ul className={links ? "nav-links active" : "nav-links"}>
           <li>
-            <a href="#home" className={activeSection === "home" ? "active" : ""}>
+            <a
+              href="#home"
+              className={activeSection === "home" ? "active" : ""}
+            >
               <FaHome />
               Home
             </a>
           </li>
 
           <li>
-            <a href="#cloud" className={activeSection === "cloud" ? "active" : ""}>
+            <a
+              href="#cloud"
+              className={activeSection === "cloud" ? "active" : ""}
+            >
               <TbCloudComputing />
               Cloud
             </a>
@@ -83,14 +90,17 @@ const Navbar = () => {
           </li>
 
           <li>
-            <a href="#about" className={activeSection === "about" ? "active" : ""}>
+            <a 
+              href="#about"
+              className={activeSection === "about" ? "active" : ""}
+            >
               <MdDescription />
               About
             </a>
           </li>
 
           <li>
-            <a
+            <a 
               href="#contact"
               className={activeSection === "contact" ? "active" : ""}
             >
@@ -100,9 +110,12 @@ const Navbar = () => {
           </li>
         </ul>
 
-        <div className="theme" onClick={toggle}>
-          <div className={move ? "btn-theme active" : "btn-theme"}></div>
-        </div>
+        {/* <div className="theme" onClick={toggle}>
+          <div
+            className={move ? "btn-theme active" : "btn-theme"}
+            onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+          ></div>
+        </div> */}
       </nav>
     </div>
   );

@@ -17,29 +17,39 @@
   background-color: #fff;
   visibility: hidden;
   opacity: 0;
-  border: 1px solid rgba($text-color, 0.2);
   transition: all 0.3s ease;
+  border: 1px solid rgba($text-color, 0.2);
   &:hover {
     border: 1px solid rgba($text-color, 0.4);
     background-color: $primary-color;
   }
-
+  
   .feedback-text {
     position: absolute;
-    left: -300%;
+    font-size: 14px;
+    left: -320%;
     width: 100px;
-    height: 50px;
+    height: 40px;
     background-color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50px;
     font-weight: 500;
-  //   width: 0;
-  // height: 0;
-  // border-top: 20px solid transparent;
-  // border-bottom: 20px solid transparent;
-  // border-left: 30px solid #8b5cf6;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 85%;
+      z-index: -1;
+      width: 0;
+      height: 0;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-left: 30px solid #fff;
+    }
   }
 
 
@@ -54,6 +64,11 @@
 }
 
 .feedback-container.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.feedback-container:hover .feedback-text {
   visibility: visible;
   opacity: 1;
 }
