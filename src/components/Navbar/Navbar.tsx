@@ -3,6 +3,8 @@ import { MdConnectWithoutContact, MdDescription } from "react-icons/md";
 import { TbCloudComputing } from "react-icons/tb";
 import { SiDevbox } from "react-icons/si";
 import { FaHome } from "react-icons/fa";
+import { CgMenuRound } from "react-icons/cg";
+
 import { useEffect, useState } from "react";
 
 const Navbar = () => {
@@ -68,7 +70,7 @@ const Navbar = () => {
               className={activeSection === "home" ? "active" : ""}
             >
               <FaHome />
-              Home
+              <span>Home</span>
             </a>
           </li>
 
@@ -78,14 +80,14 @@ const Navbar = () => {
               className={activeSection === "cloud" ? "active" : ""}
             >
               <TbCloudComputing />
-              Cloud
+              <span>Cloud</span>
             </a>
           </li>
 
           <li>
             <a href="#dev" className={activeSection === "dev" ? "active" : ""}>
               <SiDevbox />
-              Dev
+              <span>Dev</span>
             </a>
           </li>
 
@@ -95,7 +97,7 @@ const Navbar = () => {
               className={activeSection === "about" ? "active" : ""}
             >
               <MdDescription />
-              About
+              <span>About</span>
             </a>
           </li>
 
@@ -105,7 +107,7 @@ const Navbar = () => {
               className={activeSection === "contact" ? "active" : ""}
             >
               <MdConnectWithoutContact />
-              Reach Out
+              <span>Reach Out</span>
             </a>
           </li>
         </ul>
