@@ -49,3 +49,23 @@
     }
   }
 }
+
+@media screen and (max-width: 950px) {
+  .aws-container {
+    width: 550px;
+    .aws-icon {
+      width: 250px;
+      height: 150px;
+      img {
+        width: 80%;
+      }
+    }
+    .aws-img {
+      gap: 5px;
+      img {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+}

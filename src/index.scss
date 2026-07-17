@@ -69,7 +69,7 @@ h1 {
 h2 {
   
   font-size: 44px;
-  margin: 70px 0 50px;
+  margin: 50px 0 40px;
   width: 80%;
   color: $heading-color;
 }
@@ -87,4 +87,31 @@ button {
   padding: 5px 15px;
   cursor: pointer;
   font-family: inherit;
+}
+
+
+
+@media (max-width: 950px) {
+  h1 {
+    font-size: 24px;
+  }
+  h2 {
+    font-size: 36px;
+    margin: 50px 0 20px;
+  }
+  h3 {
+    font-size: 24px;
+  }
+}
+@media (max-width: 650px) {
+  h1 {
+    font-size: 24px;
+  }
+  h2 {
+    font-size: 30px;
+    margin: 50px 0 20px;
+  }
+  h3 {
+    font-size: 24px;
+  }
 }

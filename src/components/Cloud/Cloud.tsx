@@ -51,7 +51,9 @@ const Cloud = () => {
       <h2>
         <HeaderAnimation headline="Cloud Skills" />
       </h2>
-      <AwsScroll />
+      <div className="aws-scroll">
+        <AwsScroll />
+      </div>
       <h3>
         <TitleAnimation title="Cloud Certificates" />
       </h3>
