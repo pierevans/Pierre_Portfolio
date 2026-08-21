@@ -20,8 +20,8 @@ const DevScroll = () => {
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" />,
   ];
 
-  const repeated1 = [...icons1, ...icons1, ...icons1];
-  const repeated2 = [...icons2, ...icons2, ...icons2];
+  const repeated1 = [...icons1, ...icons1, ...icons1, ...icons1];
+  const repeated2 = [...icons2, ...icons2, ...icons2, ...icons2];
   return (
     <motion.div
       initial={{ opacity: 0 }}

@@ -12,11 +12,10 @@
     justify-content: center;
     flex-direction: column;
     .aws-cert {
+      width: 80%;
       display: flex;
       justify-content: center;
       flex-direction: column;
-      align-self: flex-start;
-
       h4 {
         font-style: italic;
       }
@@ -29,7 +28,7 @@
           display: flex;
           flex-direction: column;
           justify-content: center;
-          gap: 30px;
+          gap: 20px;
           width: 255px;
           height: 370px;
           img {
@@ -91,10 +90,10 @@
     }
 
     .hash-cert {
+      width: 80%;
       display: flex;
       justify-content: center;
       flex-direction: column;
-      align-self: flex-start;
 
       h4 {
         font-style: italic;
@@ -108,7 +107,7 @@
           display: flex;
           flex-direction: column;
           justify-content: center;
-          gap: 30px;
+          gap: 20px;
           width: 255px;
           height: 370px;
           img {
@@ -158,10 +157,10 @@
     }
 
     .kub-cert {
+      width: 80%;
       display: flex;
       justify-content: center;
       flex-direction: column;
-      align-self: flex-start;
       h4 {
         font-style: italic;
       }
@@ -174,7 +173,7 @@
           display: flex;
           flex-direction: column;
           justify-content: center;
-          gap: 30px;
+          gap: 20px;
           width: 255px;
           height: 370px;
           img {
@@ -231,7 +230,7 @@
     align-items: center;
     justify-content: center;
     transition: transform 0.3s ease;
-    margin: 0px auto 50px;
+    margin: 0px auto 30px;
     cursor: pointer;
     &:hover {
       cursor: pointer;
@@ -248,7 +247,7 @@
     flex-direction: column;
     align-items: flex-start;
     padding: 20px 0;
-    margin: 70px auto 0;
+    margin: 10px auto 0;
     .project-tab-container {
       width: fit-content;
       padding: 5px;
@@ -259,7 +258,6 @@
         font-size: 20px;
         font-weight: 500;
         color: $heading-color;
-
         border: none;
         font-family: $heading-font-family;
         background-color: transparent;
