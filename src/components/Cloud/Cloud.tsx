@@ -2,8 +2,8 @@ import { motion } from "framer-motion";
 import "../../index.scss";
 import "./Cloud.scss";
 import CloudCard from "../../components/Card/CloudCard/CloudCard";
-import cloudProjects from "./ProjectLists"
-
+import cloudProjects from "./ProjectLists";
+import CloudTechStack from "../CloudTechstack/CloudTechStack";
 
 import AwsScroll from "../Animation/AwsScroll/AwsScroll";
 import { FaArrowRight } from "react-icons/fa6";
@@ -22,11 +22,11 @@ import saa from "../../assets/cert-badge/SAA-C03.png";
 import sap from "../../assets/cert-badge/SAP-C02.png";
 import { useState } from "react";
 
-
 const Cloud = () => {
   const initialCards: number = 3;
   const [visibleCount, setVisibleCount] = useState(initialCards);
   const [activeTab, setActiveTab] = useState("all");
+  const [techStack, setTechStack] = useState(false);
 
   const showMoreCards = () => {
     setVisibleCount((prev) => prev + 3);
@@ -43,8 +43,6 @@ const Cloud = () => {
   const visibleCloudProjects = filteredCloudProjects.slice(0, visibleCount);
 
   const moreCards = visibleCount < filteredCloudProjects.length;
-
-
 
   return (
     <section className="cloud-container" id="cloud">
@@ -192,19 +190,27 @@ const Cloud = () => {
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
         className="more-details"
+        onClick={() => setTechStack((prev) => !prev)}
       >
         <CiCirclePlus className="more-details" />
       </motion.div>
+      {techStack && <CloudTechStack handleClose={() => setTechStack(false)} />}
       <h3>
         <TitleAnimation title="Cloud projects" />
       </h3>
 
       <div className="project-container">
         <div className="project-tab-container">
-          <button className={`project-tab ${activeTab === "all" ? "active" : ""}`} onClick={() => setActiveTab("all")}>
+          <button
+            className={`project-tab ${activeTab === "all" ? "active" : ""}`}
+            onClick={() => setActiveTab("all")}
+          >
             All
           </button>
-          <button className={`project-tab ${activeTab === "easy" ? "active" : ""}`} onClick={() => setActiveTab("easy")}>
+          <button
+            className={`project-tab ${activeTab === "easy" ? "active" : ""}`}
+            onClick={() => setActiveTab("easy")}
+          >
             Easy
           </button>
           <button
@@ -213,22 +219,26 @@ const Cloud = () => {
           >
             Intermediate
           </button>
-          <button className={`project-tab ${activeTab === "hard" ? "active" : ""}`} onClick={() => setActiveTab("hard")}>
+          <button
+            className={`project-tab ${activeTab === "hard" ? "active" : ""}`}
+            onClick={() => setActiveTab("hard")}
+          >
             Hard
           </button>
         </div>
-        <motion.div className="project-card-container"
+        <motion.div
+          className="project-card-container"
           initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            variants={{
-              hidden: {},
-              show: {
-                transition: {
-                  staggerChildren: 0.15,
-                },
+          whileInView="show"
+          viewport={{ once: true }}
+          variants={{
+            hidden: {},
+            show: {
+              transition: {
+                staggerChildren: 0.15,
               },
-            }}
+            },
+          }}
         >
           {visibleCloudProjects.map((cloudProject, index) => (
             <CloudCard
