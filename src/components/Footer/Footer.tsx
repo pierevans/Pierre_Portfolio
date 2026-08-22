@@ -12,12 +12,15 @@ const Footer = () => {
       <img className="footer-logo-2" src="/aws_logo_footer.png" alt="aws-logo" />
       <div className="footer-links">
         <a href="" target="_blank">
+          <span>LinkedIn</span>
           <IoLogoLinkedin />
         </a>
         <a href="" target="_blank">
+          <span>GitHub</span>
           <FaGithub />
         </a>
         <a href="" target="_blank">
+          <span>Discord</span>
           <FaDiscord />
         </a>
       </div>

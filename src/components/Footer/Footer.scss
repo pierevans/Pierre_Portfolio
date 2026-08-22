@@ -11,7 +11,7 @@
   
   .footer-logo-1 {
     position: absolute;
-    left: 10px;
+    left: 40px;
     top: 50%;
     width:270px;
     height: 210px;
@@ -20,7 +20,7 @@
   }
   .footer-logo-2 {
     position: absolute;
-    right: 5px;
+    right: 40px;
     top: 50%;
     width:270px;
     height: 210px;
@@ -31,16 +31,34 @@
   .footer-links {
     display: flex;
     justify-content: center;
-    gap: 50px;
+    gap: 20px;
     align-items: center;
     margin-bottom: 20px;
     padding: 20px;
     a {
-      color: #ffff;
-      transition: color 0.3s;
-      font-size: 40px;
+      display: flex;
+      align-items: center;
+      font-size: 20px;
+      font-weight: 500;
+      gap: 5px;
+      transition: all .3s;
+      padding: 3px 10px;
+      border-radius: 5px;
+      &:nth-child(1){
+        color: #ffff;
+        background-color: #0072B1;
+      }
+      &:nth-child(2){
+        color: #ffff;
+        background-color: #2b3137;
+      }
+      &:nth-child(3){
+        color: #ffff;
+        background-color: #5865f2;
+      }
       &:hover {
         color: $primary-color;
+        background-color: #ffff;
       }
     }
    
