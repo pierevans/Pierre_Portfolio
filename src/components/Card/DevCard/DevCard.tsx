@@ -1,6 +1,5 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
 // Import Swiper styles
 import "./DevCard.scss";
 import "swiper/css";
@@ -15,39 +14,42 @@ const DevCard = () => {
   const projects = [
     {
       img: "https://swiperjs.com/demos/images/abstract-1.jpg",
-      title: "Project 1",
-      description: "Description of project 1.",
+      title: "VitalPilot",
+      description:
+        "VitalPilot is a full-stack software architecture combining a TypeScript frontend, a Python backend engine, and a relational database for personalized health monitoring.",
       hrefOne: "#",
-      hrefTwo: "#",
+      hrefTwo: "https://github.com/RaymondTian12/vital-pilot-senior-design",
     },
     {
-      img: "https://swiperjs.com/demos/images/abstract-2.jpg",
-      title: "Project 2",
-      description: "Description of project 2.",
-      hrefOne: "#",
-      hrefTwo: "#",
+      img: "txuml.png",
+      title: "Texas Underground Mine Locator",
+      description:
+        "TXUML (Texas Underground Mine Locator) is a modern web application designed to help users explore underground and surface mine data across Texas..",
+      hrefOne: "https://txuml-saad-khairullahs-projects.vercel.app/",
+      hrefTwo: "https://github.com/pierevans/TXUML",
     },
     {
-      img: "https://swiperjs.com/demos/images/abstract-3.jpg",
-      title: "Project 3",
-      description: "Description of project 3.",
+      img: "movie-app.png",
+      title: "Movie App",
+      description:
+        "A React movie application that uses the API to display popular movies, search for movies, and manage a list of favorite movies.",
       hrefOne: "#",
-      hrefTwo: "#",
+      hrefTwo: "https://github.com/pierevans/React_Movie_API_Website",
     },
-    {
-      img: "https://swiperjs.com/demos/images/abstract-4.jpg",
-      title: "Project 4",
-      description: "Description of project 4.",
-      hrefOne: "#",
-      hrefTwo: "#",
-    },
-    {
-      img: "https://swiperjs.com/demos/images/abstract-5.jpg",
-      title: "Project 5",
-      description: "Description of project 5.",
-      hrefOne: "#",
-      hrefTwo: "#",
-    },
+    // {
+    //   img: "https://swiperjs.com/demos/images/abstract-4.jpg",
+    //   title: "Project 4",
+    //   description: "Description of project 4.",
+    //   hrefOne: "#",
+    //   hrefTwo: "#",
+    // },
+    // {
+    //   img: "https://swiperjs.com/demos/images/abstract-5.jpg",
+    //   title: "Project 5",
+    //   description: "Description of project 5.",
+    //   hrefOne: "#",
+    //   hrefTwo: "#",
+    // },
   ];
 
   return (
@@ -68,11 +70,11 @@ const DevCard = () => {
                 <h4>{project.title}</h4>
                 <p>{project.description}</p>
                 <div className="dev-btns">
-                  <a href={project.hrefOne}>
-                    <button>Live Demo</button>
+                  <a href={project.hrefOne} target="_blank">
+                    Live Demo
                   </a>
-                  <a href={project.hrefTwo}>
-                    <button>Github Link</button>
+                  <a href={project.hrefTwo} target="_blank">
+                    Github Link
                   </a>
                 </div>
               </div>

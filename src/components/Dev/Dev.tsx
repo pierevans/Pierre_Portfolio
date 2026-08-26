@@ -9,46 +9,6 @@ import { motion } from "framer-motion";
 import { CiCirclePlus } from "react-icons/ci";
 
 
-const projects = [
-  {
-    title: "Project 1",
-    description: "Description of the project.",
-    hrefOne: "#",
-    hrefTwo: "#",
-  },
-  {
-    title: "Project 2",
-    description: "Description of the project.",
-    hrefOne: "#",
-    hrefTwo: "#",
-  },
-  {
-    title: "Project 3",
-    description: "Description of the project.",
-    hrefOne: "#",
-    hrefTwo: "#",
-  },
-  {
-    title: "Project 4",
-    description: "Description of the project.",
-    hrefOne: "#",
-    hrefTwo: "#",
-  },
-  {
-    title: "Project 5",
-    description: "Description of the project.",
-    hrefOne: "#",
-    hrefTwo: "#",
-  },
-  {
-    title: "Project 6",
-    description: "Description of the project.",
-    hrefOne: "#",
-    hrefTwo: "#",
-  },
-];
-
-
 
 const Dev = () => {
   const [techStack, setTechStack] = useState(false);

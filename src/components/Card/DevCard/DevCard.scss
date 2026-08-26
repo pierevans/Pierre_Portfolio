@@ -18,7 +18,7 @@
 .swiper-slide img {
   display: block;
   width: 100%;
-  object-fit: cover;
+  object-fit: fill;
   border-radius: 20px;
   height: 500px;
 }
@@ -41,8 +41,8 @@
 .dev-card {
   border-radius: 20px;
   box-shadow:
-    2px 2px 20px rgba(0, 0, 0, 0.1),
-    -2px -2px 20px rgba(0, 0, 0, 0.1);
+    2px 2px 20px rgba(0, 0, 0, 0.2),
+    -2px -2px 20px rgba(0, 0, 0, 0.2);
   .dev-project {
     position: absolute;
     top: 50%;
@@ -61,10 +61,11 @@
       font-size: 26px !important;
     }
     p {
-      margin: 40px 0 50px;
-      color: $bg-color;
+      color: antiquewhite;
+      width: 80%;
+      margin: 10px 0 50px;
       text-align: justify;
-      font-size: 20px !important;
+      font-size: 18px !important;
     }
     .dev-btns {
       display: flex;
@@ -78,31 +79,25 @@
         align-items: center;
         justify-content: space-between;
         width: fit-content;
+        cursor: pointer;
+        gap: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: none;
+        font-weight: 500;
+        background-color: $primary-color;
+        color: $bg-color;
+        border: none;
+        transition: all 0.3s ease;
 
-        button {
-          cursor: pointer;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 5px;
-          padding: 10px 20px;
-          font-size: 16px;
-          border-radius: 5px;
-          border: none;
-          font-weight: 500;
-          background-color: $primary-color;
-          color: $bg-color;
-          border: none;
-          transition: all 0.3s ease;
-
-          &:hover {
-            background-color: darken($primary-color, 15%);
-          }
+        &:hover {
+          background-color: darken($primary-color, 15%);
         }
       }
     }
 
-    .dev-btns a:nth-child(2) button {
+    .dev-btns a:nth-child(2) {
       background-color: #ffff;
       color: $primary-color;
       border: 1px solid $primary-color;
@@ -117,7 +112,7 @@
     background: radial-gradient(
       circle at center,
       rgba(0, 0, 0, 0.2) 20%,
-      rgba(0, 0, 0, 0.7) 100%
+      rgba(0, 0, 0, 0.7) 80%
     );
   }
 }
@@ -132,86 +127,88 @@
   }
 
   .dev-card {
-  border-radius: 20px;
-  box-shadow:
-    2px 2px 20px rgba(0, 0, 0, 0.1),
-    -2px -2px 20px rgba(0, 0, 0, 0.1);
-  .dev-project {
-    position: absolute;
-    top: 50%;
-    height: 100%;
-    width: 100%;
     border-radius: 20px;
-    padding-left: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    transform: translateY(-50%);
-    opacity: 0;
-    transition: all ease-in 0.3s;
-    h4 {
-      color: $primary-color;
-      font-size: 22px !important;
-    }
-    p {
-      margin: 40px 0 50px;
-      color: $bg-color;
-      text-align: justify;
-      font-size: 14px !important;
-    }
-    .dev-btns {
+    box-shadow:
+      2px 2px 20px rgba(0, 0, 0, 0.1),
+      -2px -2px 20px rgba(0, 0, 0, 0.1);
+    .dev-project {
+      position: absolute;
+      top: 50%;
+      height: 100%;
+      width: 100%;
+      border-radius: 20px;
+      padding-left: 100px;
       display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 280px;
-
-      a {
-        width: 100px;
+      flex-direction: column;
+      justify-content: center;
+      transform: translateY(-50%);
+      opacity: 0;
+      transition: all ease-in 0.3s;
+      h4 {
+        color: $primary-color;
+        font-size: 22px !important;
+      }
+      p {
+        margin: 40px 0 50px;
+        color: $bg-color;
+        text-align: justify;
+        font-size: 14px !important;
+      }
+      .dev-btns {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 120px;
+        width: 280px;
 
-        button {
-          cursor: pointer;
+        a {
+          width: 100px;
           display: flex;
           align-items: center;
-          justify-content: center;
-          gap: 5px;
-          padding: 10px 20px;
-          font-size: 14px;
-          border-radius: 5px;
-          border: none;
-          font-weight: 500;
-          background-color: $primary-color;
-          color: $bg-color;
-          border: none;
-          transition: all 0.3s ease;
+          justify-content: space-between;
+          width: 120px;
 
-          &:hover {
-            background-color: darken($primary-color, 15%);
+          button {
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            padding: 10px 20px;
+            font-size: 14px;
+            border-radius: 5px;
+            border: none;
+            font-weight: 500;
+            background-color: $primary-color;
+            color: $bg-color;
+            border: none;
+            transition: all 0.3s ease;
+
+            &:hover {
+              background-color: darken($primary-color, 15%);
+            }
           }
+        }
+      }
+
+      .dev-btns a:nth-child(2) button {
+        background-color: #ffff;
+        color: $primary-color;
+        border: 1px solid $primary-color;
+        &:hover {
+          background-color: lighten($secondary-color, 6%);
         }
       }
     }
 
-    .dev-btns a:nth-child(2) button {
-      background-color: #ffff;
-      color: $primary-color;
-      border: 1px solid $primary-color;
-      &:hover {
-        background-color: lighten($secondary-color, 6%);
-      }
+    .dev-project:hover {
+      opacity: 1;
+      background: radial-gradient(
+        circle at center,
+        rgba(0, 0, 0, 0.2) 20%,
+        rgba(0, 0, 0, 0.7) 100%
+      );
     }
   }
-
-  .dev-project:hover {
-    opacity: 1;
-    background: radial-gradient(
-      circle at center,
-      rgba(0, 0, 0, 0.2) 20%,
-      rgba(0, 0, 0, 0.7) 100%
-    );
-  }
-}
 }
