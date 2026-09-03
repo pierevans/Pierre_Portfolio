@@ -135,6 +135,51 @@ const CloudTechStack = ({ handleClose }: { handleClose: () => void }) => {
             </div>
           </div>
         </div>
+
+        <div className="cloud-stack-categories">
+          <h4>Management and Governance services</h4>
+          <div className="cloud-stack-logo-container">
+            <div className="cloud-stack-logo">
+              <img src="aws-logo/CloudTrail.png" />
+              <p>AWS CloudTrail</p>
+            </div>
+            <div className="cloud-stack-logo">
+              <img src="aws-logo/CloudWatch.png" />
+              <p>AWS CloudWatch</p>
+            </div>
+            <div className="cloud-stack-logo">
+              <img src="aws-logo/Config.png" />
+              <p>AWS Config</p>
+            </div>
+            <div className="cloud-stack-logo">
+              <img src="aws-logo/Auto Scaling.png" />
+              <p>AWS Auto Scaling</p>
+            </div>
+            <div className="cloud-stack-logo">
+              <img src="aws-logo/Trusted Advisor.png" />
+              <p>AWS Trusted Advisor</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="cloud-stack-categories">
+          <h4>AWS Cost Management services</h4>
+          <div className="cloud-stack-logo-container">
+            <div className="cloud-stack-logo">
+              <img src="aws-logo/Cost and Usage Report.png" />
+              <p>AWS Cost and Usage Report</p>
+            </div>
+            <div className="cloud-stack-logo">
+              <img src="aws-logo/Cost Explorer.png" />
+              <p>AWS Cost Explorer</p>
+            </div>
+            <div className="cloud-stack-logo">
+              <img src="aws-logo/Budgets.png" />
+              <p>AWS Budgets</p>
+            </div>
+          </div>
+        </div>
+
         <div className="cloud-stack-categories">
           <h4>Security, identity services</h4>
           <div className="cloud-stack-logo-container">
