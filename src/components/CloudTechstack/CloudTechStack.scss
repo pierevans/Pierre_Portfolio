@@ -8,7 +8,7 @@
 
   .cloud-stack-container {
     max-width: 1500px;
-
+    padding: 50px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -22,7 +22,7 @@
     width: 80%;
     height: 600px;
     padding: 30px 100px;
-
+ 
     h3 {
       display: flex;
       align-items: center;
@@ -33,18 +33,13 @@
     .cloud-stack-categories {
       display: flex;
       flex-direction: column;
-
       height: 70px;
-
       background-color: #fff;
-
       border: 1px solid darken($bg-color, 10%);
       border-radius: 25px;
-
-
       transition:
-        height .5s ease,
-        box-shadow 0.3s ease;
+        height .8s ease,
+        box-shadow 0.6s ease;
 
       h4 {
         display: flex;
@@ -71,8 +66,8 @@
         opacity: 0;
         transform: translateY(-10px);
         transition:
-          opacity 0.3s ease,
-          transform 0.5s ease;
+          opacity 0.5s ease,
+          transform .8s ease;
 
         .cloud-stack-logo {
           display: flex;
@@ -111,16 +106,11 @@
 
     .close-btn {
       position: absolute;
-
       top: 20px;
       right: 20px;
-
       color: $text-color;
-
       font-size: 1.5rem;
-
       cursor: pointer;
-
       transition:
         color 0.3s ease,
         transform 0.3s ease;

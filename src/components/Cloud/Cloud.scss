@@ -12,7 +12,7 @@
     justify-content: center;
     flex-direction: column;
     .aws-cert {
-      width: 80%;
+      width: 90%;
       display: flex;
       justify-content: center;
       flex-direction: column;
@@ -22,16 +22,17 @@
       .aws-cert-list {
         display: flex;
         align-items: center;
+        justify-content: center;
         gap: 30px;
         flex-wrap: wrap;
         a {
-          
           display: flex;
           flex-direction: column;
           justify-content: center;
+          align-items: center;
           gap: 20px;
-          width: 255px;
-          height: 330px;
+          width: 225px;
+          height: 300px;
           img {
             width: 90%;
             transition:
@@ -42,7 +43,7 @@
             height: 40px;
             display: flex;
             align-items: center;
-            justify-content: flex-start;
+            justify-content: center;
             padding: 0 5px;
             margin: 0 10px;
             gap: 8px;
@@ -64,6 +65,7 @@
 
           &:hover .cert-title p {
             max-width: 200px;
+            height: auto;
             opacity: 1;
             transform: translateX(0);
           }
@@ -91,7 +93,7 @@
     }
 
     .hash-cert {
-      width: 80%;
+      width: 90%;
       display: flex;
       justify-content: center;
       flex-direction: column;
@@ -108,9 +110,10 @@
           display: flex;
           flex-direction: column;
           justify-content: center;
+          align-items: center;
           gap: 20px;
-          width: 255px;
-          height: 330px;
+          width: 225px;
+          height: 300px;
           img {
             width: 90%;
             transition:
@@ -121,7 +124,7 @@
             height: 40px;
             display: flex;
             align-items: center;
-            justify-content: flex-start;
+            justify-content: center;
             padding: 0 5px;
             margin: 0 10px;
             gap: 8px;
@@ -158,7 +161,7 @@
     }
 
     .kub-cert {
-      width: 80%;
+      width: 90%;
       display: flex;
       justify-content: center;
       flex-direction: column;
@@ -174,9 +177,10 @@
           display: flex;
           flex-direction: column;
           justify-content: center;
+          align-items: center;
           gap: 20px;
-          width: 255px;
-          height: 330px;
+          width: 225px;
+          height: 300px;
           img {
             width: 90%;
             transition:
@@ -187,7 +191,7 @@
             height: 40px;
             display: flex;
             align-items: center;
-            justify-content: flex-start;
+            justify-content: center;
             padding: 0 5px;
             margin: 0 10px;
             gap: 8px;
@@ -248,7 +252,7 @@
     flex-direction: column;
     align-items: flex-start;
     padding: 20px 0;
-    margin: 10px auto 0;
+    margin: 10px auto 40px;
     .project-tab-container {
       width: fit-content;
       padding: 5px;

@@ -17,7 +17,7 @@ import TitleAnimation from "../Animation/TitleAnimation";
 import clf from "../../assets/cert-badge/CLF-C02.png";
 import dop from "../../assets/cert-badge/DOP-C02.png";
 import hcta from "../../assets/cert-badge/HCTA0-004.png";
-import knca from "../../assets/cert-badge/KCNA.webp";
+import cka from "../../assets/cert-badge/CKA.png";
 import saa from "../../assets/cert-badge/SAA-C03.png";
 import sap from "../../assets/cert-badge/SAP-C02.png";
 import { useState } from "react";
@@ -52,6 +52,91 @@ const Cloud = () => {
       <div className="aws-scroll">
         <AwsScroll />
       </div>
+
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+        className="more-details"
+        onClick={() => setTechStack((prev) => !prev)}
+      >
+        <CiCirclePlus className="more-details" />
+      </motion.div>
+      {techStack && <CloudTechStack handleClose={() => setTechStack(false)} />}
+
+      
+      <h3>
+        <TitleAnimation title="Cloud projects" />
+      </h3>
+
+      <div className="project-container">
+        <div className="project-tab-container">
+          <button
+            className={`project-tab ${activeTab === "all" ? "active" : ""}`}
+            onClick={() => setActiveTab("all")}
+          >
+            All
+          </button>
+          <button
+            className={`project-tab ${activeTab === "easy" ? "active" : ""}`}
+            onClick={() => setActiveTab("easy")}
+          >
+            Easy
+          </button>
+          <button
+            className={`project-tab ${activeTab === "medium" ? "active" : ""}`}
+            onClick={() => setActiveTab("medium")}
+          >
+            Intermediate
+          </button>
+          <button
+            className={`project-tab ${activeTab === "hard" ? "active" : ""}`}
+            onClick={() => setActiveTab("hard")}
+          >
+            Hard
+          </button>
+        </div>
+        <motion.div
+          className="project-card-container"
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          variants={{
+            hidden: {},
+            show: {
+              transition: {
+                staggerChildren: 0.15,
+              },
+            },
+          }}
+        >
+          {visibleCloudProjects.map((cloudProject, index) => (
+            <CloudCard
+              key={index}
+              title={cloudProject.title}
+              description={cloudProject.description}
+              img={cloudProject.src}
+              href={cloudProject.href}
+            />
+          ))}
+        </motion.div>
+        {moreCards ? (
+          <button className="show-card" onClick={showMoreCards}>
+            Show more
+            <IoIosArrowDown className="show-card-icon" />
+          </button>
+        ) : (
+          filteredCloudProjects.length > initialCards &&
+          visibleCount > initialCards && (
+            <button className="show-card" onClick={showLessCards}>
+              Show less
+              <IoIosArrowUp className="show-card-icon rotate" />
+            </button>
+          )
+        )}
+      </div>
+
       <h3>
         <TitleAnimation title="Cloud Certificates" />
       </h3>
@@ -172,7 +257,7 @@ const Cloud = () => {
           <h4>Kubernetes Certifications</h4>
           <div className="kubernetes-cert-list">
             <a href="">
-              <img src={knca} alt="" />
+              <img src={cka} alt="" />
               <div className="cert-title">
                 <p>
                   Kubernetes and Cloud Native
@@ -184,87 +269,7 @@ const Cloud = () => {
           </div>
         </motion.div>
       </div>
-      <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ once: true }}
-        className="more-details"
-        onClick={() => setTechStack((prev) => !prev)}
-      >
-        <CiCirclePlus className="more-details" />
-      </motion.div>
-      {techStack && <CloudTechStack handleClose={() => setTechStack(false)} />}
-      <h3>
-        <TitleAnimation title="Cloud projects" />
-      </h3>
-
-      <div className="project-container">
-        <div className="project-tab-container">
-          <button
-            className={`project-tab ${activeTab === "all" ? "active" : ""}`}
-            onClick={() => setActiveTab("all")}
-          >
-            All
-          </button>
-          <button
-            className={`project-tab ${activeTab === "easy" ? "active" : ""}`}
-            onClick={() => setActiveTab("easy")}
-          >
-            Easy
-          </button>
-          <button
-            className={`project-tab ${activeTab === "medium" ? "active" : ""}`}
-            onClick={() => setActiveTab("medium")}
-          >
-            Intermediate
-          </button>
-          <button
-            className={`project-tab ${activeTab === "hard" ? "active" : ""}`}
-            onClick={() => setActiveTab("hard")}
-          >
-            Hard
-          </button>
-        </div>
-        <motion.div
-          className="project-card-container"
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          variants={{
-            hidden: {},
-            show: {
-              transition: {
-                staggerChildren: 0.15,
-              },
-            },
-          }}
-        >
-          {visibleCloudProjects.map((cloudProject, index) => (
-            <CloudCard
-              key={index}
-              title={cloudProject.title}
-              description={cloudProject.description}
-              img={cloudProject.src}
-              href={cloudProject.href}
-            />
-          ))}
-        </motion.div>
-        {moreCards ? (
-          <button className="show-card" onClick={showMoreCards}>
-            Show more
-            <IoIosArrowDown className="show-card-icon" />
-          </button>
-        ) : (
-          filteredCloudProjects.length > initialCards &&
-          visibleCount > initialCards && (
-            <button className="show-card" onClick={showLessCards}>
-              Show less
-              <IoIosArrowUp className="show-card-icon rotate" />
-            </button>
-          )
-        )}
-      </div>
+    
     </section>
   );
 };

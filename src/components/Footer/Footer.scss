@@ -1,7 +1,7 @@
 @use "../../index.scss" as *;
 
 .footer {
-  background-color: $heading-color;
+  background-color: darken($primary-color, 40%);
   position: relative;
   // height: 350px;
   display: flex;
@@ -65,7 +65,7 @@
   }
   .footer-heading {
     position: relative;
-    color: #ffff;
+    color: white;
     font-size: 80px;
     margin-bottom: 20px;
     font-family: $heading-font-family;
