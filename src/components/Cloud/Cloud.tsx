@@ -26,7 +26,7 @@ const Cloud = () => {
   const initialCards: number = 3;
   const [visibleCount, setVisibleCount] = useState(initialCards);
   const [activeTab, setActiveTab] = useState("all");
-  const [techStack, setTechStack] = useState(false);
+  // const [techStack, setTechStack] = useState(false);
 
   const showMoreCards = () => {
     setVisibleCount((prev) => prev + 3);
@@ -53,19 +53,68 @@ const Cloud = () => {
         <AwsScroll />
       </div>
 
-      <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ once: true }}
-        className="more-details"
-        onClick={() => setTechStack((prev) => !prev)}
-      >
-        <CiCirclePlus className="more-details" />
-      </motion.div>
-      {techStack && <CloudTechStack handleClose={() => setTechStack(false)} />}
+      <h3>
+        <TitleAnimation title="Cloud Stack" />
+      </h3>
 
-      
+      <div className="cloud-stack-container">
+        <div className="stack-container">
+          <div className="cloud-stack">
+            <span>Cloud</span>
+            <div className="stack-img">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" />
+            </div>
+            <p>EC2 S3 RDS VPC ECS EKS CloudFront IAM CloudWatch etc..</p>
+          </div>
+          <div className="cloud-stack">
+            <span>Infrastructure as Code</span>
+            <div className="stack-img">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/terraform/terraform-original.svg" />
+            </div>
+            <p>
+              Terraform
+              <br /> HCP Terraform
+            </p>
+          </div>
+          <div className="cloud-stack">
+            <span>Container & Orchestration</span>
+            <div className="stack-img">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-original.svg" />
+            </div>
+            <p>
+              Docker
+              <br />
+              Kubernetes
+              <br /> ECR
+            </p>
+          </div>
+          <div className="cloud-stack">
+            <span>CI/CD</span>
+            <div className="stack-img">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/githubactions/githubactions-original.svg" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-original.svg" />
+            </div>
+            <p>
+              GitHub Actions
+              <br /> Jenkins
+              <br /> CICD Pipelines
+            </p>
+          </div>
+          <div className="cloud-stack">
+            <span>Tools & Others</span>
+            <div className="stack-img">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg" />
+            </div>
+            <p>
+              Linux
+              <br /> Bash
+            </p>
+          </div>
+        </div>
+      </div>
+
       <h3>
         <TitleAnimation title="Cloud projects" />
       </h3>
@@ -82,7 +131,7 @@ const Cloud = () => {
             className={`project-tab ${activeTab === "easy" ? "active" : ""}`}
             onClick={() => setActiveTab("easy")}
           >
-            Easy
+            Beginner
           </button>
           <button
             className={`project-tab ${activeTab === "medium" ? "active" : ""}`}
@@ -269,7 +318,6 @@ const Cloud = () => {
           </div>
         </motion.div>
       </div>
-    
     </section>
   );
 };

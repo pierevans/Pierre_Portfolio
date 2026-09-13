@@ -20,7 +20,8 @@
   .cloud-image {
     border-radius: 20px;
     width: 100%;
-    flex-basis: 60%;
+    height: 250px;
+    flex-basis: 50%;
     overflow: hidden;
 
     img {
@@ -37,6 +38,7 @@
   .cloud-project {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     color: $text-color;
     width: 100%;
     flex-basis: 50%;
@@ -45,6 +47,7 @@
     h4 {
       font-weight: bold;
       color: $primary-color;
+      height: 50px;
     }
     p {
       font-size: 14px;
