@@ -1,6 +1,7 @@
 @use "../../index.scss" as *;
 .hero {
   z-index: -1000;
+  margin-bottom: 40px;
   .hero-container {
     position: relative;
     display: flex;

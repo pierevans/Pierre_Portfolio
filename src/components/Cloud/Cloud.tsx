@@ -4,6 +4,7 @@ import "./Cloud.scss";
 import CloudCard from "../../components/Card/CloudCard/CloudCard";
 import cloudProjects from "./ProjectLists";
 // import CloudTechStack from "../CloudTechstack/CloudTechStack";
+import { FaCheck } from "react-icons/fa";
 
 import AwsScroll from "../Animation/AwsScroll/AwsScroll";
 import { FaArrowRight } from "react-icons/fa6";
@@ -61,35 +62,39 @@ const Cloud = () => {
         <motion.div
           className="stack-container"
           initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            variants={{
-              hidden: {},
-              show: {
-                transition: {
-                  staggerChildren: 0.15,
-                },
-              },
-            }}
-        >
-          <motion.div className="cloud-stack" 
+          whileInView="show"
+          viewport={{ once: true }}
           variants={{
-                hidden: { opacity: 0, x: -40 },
-                show: { opacity: 1, x: 0 },
-              }}
-              transition={{ duration: 0.5 }}>
+            hidden: {},
+            show: {
+              transition: {
+                staggerChildren: 0.15,
+              },
+            },
+          }}
+        >
+          <motion.div
+            className="cloud-stack"
+            variants={{
+              hidden: { opacity: 0, x: -40 },
+              show: { opacity: 1, x: 0 },
+            }}
+            transition={{ duration: 0.5 }}
+          >
             <span>Cloud</span>
             <div className="stack-img">
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" />
             </div>
             <p>EC2 S3 RDS VPC ECS EKS CloudFront IAM CloudWatch etc..</p>
           </motion.div>
-          <motion.div className="cloud-stack" 
-          variants={{
-                hidden: { opacity: 0, x: -40 },
-                show: { opacity: 1, x: 0 },
-              }}
-              transition={{ duration: 0.5 }}>
+          <motion.div
+            className="cloud-stack"
+            variants={{
+              hidden: { opacity: 0, x: -40 },
+              show: { opacity: 1, x: 0 },
+            }}
+            transition={{ duration: 0.5 }}
+          >
             <span>Infrastructure as Code</span>
             <div className="stack-img">
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/terraform/terraform-original.svg" />
@@ -99,12 +104,14 @@ const Cloud = () => {
               <br /> HCP Terraform
             </p>
           </motion.div>
-          <motion.div className="cloud-stack" 
-          variants={{
-                hidden: { opacity: 0, x: -40 },
-                show: { opacity: 1, x: 0 },
-              }}
-              transition={{ duration: 0.5 }}>
+          <motion.div
+            className="cloud-stack"
+            variants={{
+              hidden: { opacity: 0, x: -40 },
+              show: { opacity: 1, x: 0 },
+            }}
+            transition={{ duration: 0.5 }}
+          >
             <span>Container & Orchestration</span>
             <div className="stack-img">
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" />
@@ -117,12 +124,14 @@ const Cloud = () => {
               <br /> ECR
             </p>
           </motion.div>
-          <motion.div className="cloud-stack" 
-          variants={{
-                hidden: { opacity: 0, x: -40 },
-                show: { opacity: 1, x: 0 },
-              }}
-              transition={{ duration: 0.5 }}>
+          <motion.div
+            className="cloud-stack"
+            variants={{
+              hidden: { opacity: 0, x: -40 },
+              show: { opacity: 1, x: 0 },
+            }}
+            transition={{ duration: 0.5 }}
+          >
             <span>CI/CD</span>
             <div className="stack-img">
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/githubactions/githubactions-original.svg" />
@@ -134,12 +143,14 @@ const Cloud = () => {
               <br /> CICD Pipelines
             </p>
           </motion.div>
-          <motion.div className="cloud-stack" 
-          variants={{
-                hidden: { opacity: 0, x: -40 },
-                show: { opacity: 1, x: 0 },
-              }}
-              transition={{ duration: 0.5 }}>
+          <motion.div
+            className="cloud-stack"
+            variants={{
+              hidden: { opacity: 0, x: -40 },
+              show: { opacity: 1, x: 0 },
+            }}
+            transition={{ duration: 0.5 }}
+          >
             <span>Tools & Others</span>
             <div className="stack-img">
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" />
@@ -253,6 +264,17 @@ const Cloud = () => {
               href=""
             >
               <img src={clf} alt="" />
+              <div
+                className="result"
+                style={{
+                  color: "#63AC9D",
+                  backgroundColor: "#DCF0E8",
+                  border: "1px solid #63AC9D",
+                }}
+              >
+                {" "}
+                <FaCheck /> Earned
+              </div>
               <div className="cert-title">
                 <p>Cloud Practitioner</p>
                 <FaArrowRight />
@@ -267,6 +289,15 @@ const Cloud = () => {
               href=""
             >
               <img src={saa} alt="" />
+              <div className="result" style={{
+                  color: "#8A97AB",
+                  backgroundColor: "#EEF2F6",
+                  border: "1px solid #8A97AB",
+                }}>
+                {" "}
+                <FaCheck /> In Progress
+              </div>
+
               <div className="cert-title">
                 <p>Solutions Architect Associate</p>
                 <FaArrowRight />
@@ -281,12 +312,17 @@ const Cloud = () => {
               href=""
             >
               <img src={dop} alt="" />
+              <div className="result" style={{
+                  color: "#8A97AB",
+                  backgroundColor: "#EEF2F6",
+                  border: "1px solid #8A97AB",
+                }}>
+                {" "}
+                <FaCheck /> Planned
+              </div>
+
               <div className="cert-title">
-                <p>
-                  DevOps Engineer Professional
-                  <br />
-                  Not yet obtained
-                </p>
+                <p>DevOps Engineer Professional</p>
                 <FaArrowRight />
               </div>
             </motion.a>
@@ -299,25 +335,38 @@ const Cloud = () => {
               href=""
             >
               <img src={sap} alt="" />
+              <div className="result" style={{
+                  color: "#8A97AB",
+                  backgroundColor: "#EEF2F6",
+                  border: "1px solid #8A97AB",
+                }}>
+                {" "}
+                <FaCheck /> Planned
+              </div>
+
               <div className="cert-title">
-                <p>
-                  Solutions Architect Professional <br />
-                  Not yet obtained
-                </p>
+                <p>Solutions Architect Professional</p>
                 <FaArrowRight />
               </div>
             </motion.a>
           </motion.div>
         </div>
-        <motion.div
-          initial={{ opacity: 0, x: -40 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
+        <div
           className="hash-cert"
         >
           <h4>Terraform Certifications</h4>
-          <div className="terraform-cert-list">
+          <div className="terraform-cert-list"  
+          initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            variants={{
+              hidden: {},
+              show: {
+                transition: {
+                  staggerChildren: 0.15,
+                },
+              },
+            }}>
             <motion.a
               variants={{
                 hidden: { opacity: 0, x: -40 },
@@ -327,34 +376,63 @@ const Cloud = () => {
               href=""
             >
               <img src={hcta} alt="" />
+              <div
+                className="result"
+                style={{
+                  color: "#63AC9D",
+                  backgroundColor: "#DCF0E8",
+                  border: "1px solid #63AC9D",
+                }}
+              >
+                {" "}
+                <FaCheck /> Earned
+              </div>
               <div className="cert-title">
                 <p>Terraform Associate (004)</p>
                 <FaArrowRight />
               </div>
             </motion.a>
           </div>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, x: -40 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
+        </div>
+        <div
           className="kub-cert"
         >
           <h4>Kubernetes Certifications</h4>
-          <div className="kubernetes-cert-list">
+          <div className="kubernetes-cert-list"  
+          initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            variants={{
+              hidden: {},
+              show: {
+                transition: {
+                  staggerChildren: 0.15,
+                },
+              },
+            }}>
             <a href="">
               <img src={cka} alt="" />
+              <div
+                className="result"
+                style={{
+                  color: "#8A97AB",
+                  backgroundColor: "#EEF2F6",
+                  border: "1px solid #8A97AB",
+                }}
+              >
+                {" "}
+                <FaCheck /> In Progress
+              </div>
+
               <div className="cert-title">
                 <p>
-                  Kubernetes and Cloud Native
-                  <br /> Associate
+                  Certified Kubernetes <br />Administrator
                 </p>
                 <FaArrowRight />
               </div>
             </a>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

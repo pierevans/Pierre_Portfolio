@@ -10,7 +10,7 @@
     align-items: center;
     justify-content: center;
     height: 400px;
-
+    width: 100%;
     .stack-container {
       max-width: 1500px;
       gap: 20px;
@@ -18,7 +18,6 @@
       align-items: center;
       justify-content: center;
       margin: 0px auto;
-      width: 80%;
       .cloud-stack {
         background-color: #ffff;
         display: flex;
@@ -26,7 +25,7 @@
         align-items: center;
         justify-content: space-between;
         text-align: center;
-
+        transition: all 0.3s ease;
         padding: 20px;
         width: 200px;
         height: 280px;
@@ -66,30 +65,38 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    h4 {
+      font-style: italic;
+      margin: 20px 0;
+    }
     .aws-cert {
       width: 90%;
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      h4 {
-        font-style: italic;
-      }
       .aws-cert-list {
+        width: 100%;
         display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 30px;
+        gap: 20px;
         flex-wrap: wrap;
         a {
+          background-color: #e6e3f8;
+          padding: 15px 5px;
+          border-radius: 25px;
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          gap: 20px;
-          width: 225px;
-          height: 300px;
+          gap: 10px;
+          width: 235px;
+          height: 320px;
+          .result {
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+            gap: 5px;
+            padding: 5px 10px;
+            border-radius: 25px;
+          }
           img {
-            width: 90%;
+            width: 80%;
             transition:
               transform 0.5s ease,
               filter 0.5s ease;
@@ -147,30 +154,39 @@
       }
     }
 
+    h4 {
+      font-style: italic;
+      margin: 30px 0;
+    }
     .hash-cert {
       width: 90%;
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-
-      h4 {
-        font-style: italic;
-      }
-
       .terraform-cert-list {
+        width: 100%;
         display: flex;
-        justify-content: center;
-        flex-direction: column;
+        
+        gap: 20px;
+        flex-wrap: wrap;
         a {
+          background-color: #e6e3f8;
+          padding: 15px 5px;
+          border-radius: 25px;
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
           gap: 20px;
-          width: 225px;
-          height: 300px;
+          width: 235px;
+          height: 320px;
+          .result {
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+            gap: 5px;
+            padding: 5px 10px;
+            border-radius: 25px;
+          }
           img {
-            width: 90%;
+            width: 80%;
             transition:
               transform 0.5s ease,
               filter 0.5s ease;
@@ -215,29 +231,36 @@
       }
     }
 
+    h4 {
+      font-style: italic;
+      margin: 20px 0;
+    }
     .kub-cert {
       width: 90%;
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      h4 {
-        font-style: italic;
-      }
 
       .kubernetes-cert-list {
         display: flex;
-        justify-content: center;
-        flex-direction: column;
         a {
+          background-color: #e6e3f8;
+          padding: 15px 5px;
+          border-radius: 25px;
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
           gap: 20px;
-          width: 225px;
-          height: 300px;
+          width: 235px;
+          height: 320px;
+          .result {
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+            gap: 5px;
+            padding: 5px 15px;
+            border-radius: 25px;
+          }
           img {
-            width: 90%;
+            width: 80%;
             transition:
               transform 0.5s ease,
               filter 0.5s ease;
