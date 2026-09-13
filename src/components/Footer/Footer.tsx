@@ -26,6 +26,9 @@ const Footer = () => {
       </div>
       <span className="footer-heading"><ScrambleText text="Pierre Konan"/></span>
       <a className="back-top" href="#home">Back to top <FaArrowUp /></a>
+      <div className="footer-bottom">
+        <p>&copy; {new Date().getFullYear()} Pierre Konan. All rights reserved.</p>
+      </div>
     </div>
   );
 };

@@ -16,7 +16,7 @@ const cloudProjects: {
   {
     title: "Hosting a Static Website on AWS",
     description:
-      "Hosting a static website on AWS using S3, CloudFront, and Route 53 to provide a scalable and reliable solution for serving web content.",
+      "Hosting a static website on AWS using S3, CloudFront to provide a scalable and reliable solution for serving web content.",
     href: "https://github.com/pierevans/Host-a-Website-on-Amazon-S3",
     src: "/cloud-project-pics/Host-Static-Web.png",
     level: "easy",
@@ -31,25 +31,25 @@ const cloudProjects: {
   },
   {
     title: "project 4",
-    description: "fgyttttttttttftrh rtytry  yyyyyyyytytyty",
-    href: "",
-    src: "/cloud-project-pics/IAM-AWS.png",
-    level: "hard",
+    description: "Provisioned and hosted a static website on AWS using Terraform, Amazon S3, and CloudFront to deliver a scalable, secure, and reliable web hosting solution.",
+    href: "https://github.com/pierevans/Host-a-Website-on-Amazon-S3-with-Terraform",
+    src: "/cloud-project-pics/Host-Static-Web-Terraform.png",
+    level: "easy",
   },
-  {
-    title: "project 5",
-    description: "fgyttttttttttftrh rtytry  yyyyyyyytytyty",
-    href: "",
-    src: "/cloud-project-pics/IAM-AWS.png",
-    level: "medium",
-  },
-  {
-    title: "project 6",
-    description: "fgyttttttttttftrh rtytry  yyyyyyyytytyty",
-    href: "",
-    src: "/cloud-project-pics/IAM-AWS.png",
-    level: "hard",
-  },
+  // {
+  //   title: "project 5",
+  //   description: "fgyttttttttttftrh rtytry  yyyyyyyytytyty",
+  //   href: "",
+  //   src: "/cloud-project-pics/IAM-AWS.png",
+  //   level: "medium",
+  // },
+  // {
+  //   title: "project 6",
+  //   description: "fgyttttttttttftrh rtytry  yyyyyyyytytyty",
+  //   href: "",
+  //   src: "/cloud-project-pics/IAM-AWS.png",
+  //   level: "hard",
+  // },
 ];
 
 export default cloudProjects;

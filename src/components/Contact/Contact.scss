@@ -1,14 +1,6 @@
 @use "../../index.scss" as *;
-
-.contact-card {
+.contact-section {
   position: relative;
-  padding: 20px 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  margin: 0 auto;
-  max-width: 1500px;
   .background-pattern {
     position: absolute;
     z-index: -9;
@@ -24,50 +16,52 @@
     );
 
     -webkit-mask-image: radial-gradient(
-      ellipse 50% 50% at 50% 60%,
+      ellipse 50% 50% at 50% 55%,
       #000 70%,
       transparent 100%
     );
   }
-
-  .contact-container {
-    z-index: 1;
-    background-color: $secondary-color;
-    margin: 0 auto 100px;
-    height: 70%;
-    width: 80%;
-    border-radius: 10px;
+  .contact-card {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    padding: 40px 0;
-    box-shadow:
-      3px 3px 10px lighten($text-color, 50%),
-      -2px -2px 10px lighten($text-color, 50%);
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 1500px;
 
-    .contact-mail {
-      box-shadow:
-        3px 3px 10px lighten($primary-color, 30%),
-        -2px -2px 10px lighten($primary-color, 30%);
-      height: 80%;
-      width: 400px;
-      background-color: #ffff;
+    .contact-container {
+      z-index: 1;
+      margin: 0 auto 80px;
+      height: 70%;
+      width: 80%;
       border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
 
-      .contact-title {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        margin: 30px 0 0 50px;
-        color: $primary-color;
+      .contact-mail {
+        box-shadow:
+          3px 3px 5px lighten($primary-color, 35%),
+          -2px -2px 5px lighten($primary-color, 35%);
+        height: 80%;
+        width: 400px;
+        background-color: #ffff;
+        border-radius: 10px;
+
+        .contact-title {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          margin: 30px 0 0 50px;
+          color: $primary-color;
+        }
       }
-    }
-    .contact-img {
-      width: 400px;
-      height: 400px;
-
-      img {
-        width: 100%;
+      .contact-img {
+        width: 650px;
+        filter: drop-shadow(3px 3px 10px lighten($primary-color, 25%));
+        img {
+          width: 100%;
+        }
       }
     }
   }
