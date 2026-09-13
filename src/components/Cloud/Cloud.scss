@@ -31,6 +31,12 @@
         width: 200px;
         height: 280px;
         border-radius: 20px;
+        &:hover {
+          box-shadow:
+            -1px -1px 5px rgb(124, 47, 247),
+            1px 1px 20px rgb(191, 0, 255),
+            5px 6px 20px rgb(255, 252, 55);
+        }
         span {
           height: 60px;
           font-size: 18px;

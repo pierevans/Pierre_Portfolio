@@ -6,11 +6,10 @@ interface Props {
   img: any;
   title: string;
   description: string;
-  icon: any;
   href: string;
 }
 
-const CloudCard = ({ img, title, description, icon, href }: Props) => {
+const CloudCard = ({ img, title, description, href }: Props) => {
   return (
     <motion.div
       className="cloud-card"
@@ -25,9 +24,6 @@ const CloudCard = ({ img, title, description, icon, href }: Props) => {
       <div className="cloud-project">
         <h4>{title}</h4>
         <p>{description}</p>
-        <div className="arrow-icon-container">
-          {icon}
-        </div>
         <a
           href={href}
           className="arrow-icon"

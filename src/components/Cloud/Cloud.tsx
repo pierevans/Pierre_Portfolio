@@ -3,11 +3,11 @@ import "../../index.scss";
 import "./Cloud.scss";
 import CloudCard from "../../components/Card/CloudCard/CloudCard";
 import cloudProjects from "./ProjectLists";
-import CloudTechStack from "../CloudTechstack/CloudTechStack";
+// import CloudTechStack from "../CloudTechstack/CloudTechStack";
 
 import AwsScroll from "../Animation/AwsScroll/AwsScroll";
 import { FaArrowRight } from "react-icons/fa6";
-import { CiCirclePlus } from "react-icons/ci";
+// import { CiCirclePlus } from "react-icons/ci";
 import { IoIosArrowUp } from "react-icons/io";
 import { IoIosArrowDown } from "react-icons/io";
 
@@ -58,15 +58,38 @@ const Cloud = () => {
       </h3>
 
       <div className="cloud-stack-container">
-        <div className="stack-container">
-          <div className="cloud-stack">
+        <motion.div
+          className="stack-container"
+          initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            variants={{
+              hidden: {},
+              show: {
+                transition: {
+                  staggerChildren: 0.15,
+                },
+              },
+            }}
+        >
+          <motion.div className="cloud-stack" 
+          variants={{
+                hidden: { opacity: 0, x: -40 },
+                show: { opacity: 1, x: 0 },
+              }}
+              transition={{ duration: 0.5 }}>
             <span>Cloud</span>
             <div className="stack-img">
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" />
             </div>
             <p>EC2 S3 RDS VPC ECS EKS CloudFront IAM CloudWatch etc..</p>
-          </div>
-          <div className="cloud-stack">
+          </motion.div>
+          <motion.div className="cloud-stack" 
+          variants={{
+                hidden: { opacity: 0, x: -40 },
+                show: { opacity: 1, x: 0 },
+              }}
+              transition={{ duration: 0.5 }}>
             <span>Infrastructure as Code</span>
             <div className="stack-img">
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/terraform/terraform-original.svg" />
@@ -75,8 +98,13 @@ const Cloud = () => {
               Terraform
               <br /> HCP Terraform
             </p>
-          </div>
-          <div className="cloud-stack">
+          </motion.div>
+          <motion.div className="cloud-stack" 
+          variants={{
+                hidden: { opacity: 0, x: -40 },
+                show: { opacity: 1, x: 0 },
+              }}
+              transition={{ duration: 0.5 }}>
             <span>Container & Orchestration</span>
             <div className="stack-img">
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" />
@@ -88,8 +116,13 @@ const Cloud = () => {
               Kubernetes
               <br /> ECR
             </p>
-          </div>
-          <div className="cloud-stack">
+          </motion.div>
+          <motion.div className="cloud-stack" 
+          variants={{
+                hidden: { opacity: 0, x: -40 },
+                show: { opacity: 1, x: 0 },
+              }}
+              transition={{ duration: 0.5 }}>
             <span>CI/CD</span>
             <div className="stack-img">
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/githubactions/githubactions-original.svg" />
@@ -100,8 +133,13 @@ const Cloud = () => {
               <br /> Jenkins
               <br /> CICD Pipelines
             </p>
-          </div>
-          <div className="cloud-stack">
+          </motion.div>
+          <motion.div className="cloud-stack" 
+          variants={{
+                hidden: { opacity: 0, x: -40 },
+                show: { opacity: 1, x: 0 },
+              }}
+              transition={{ duration: 0.5 }}>
             <span>Tools & Others</span>
             <div className="stack-img">
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" />
@@ -111,8 +149,8 @@ const Cloud = () => {
               Linux
               <br /> Bash
             </p>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
 
       <h3>
