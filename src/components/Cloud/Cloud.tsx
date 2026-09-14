@@ -355,7 +355,7 @@ const Cloud = () => {
           className="hash-cert"
         >
           <h4>Terraform Certifications</h4>
-          <div className="terraform-cert-list"  
+          <motion.div className="terraform-cert-list"  
           initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
@@ -392,13 +392,13 @@ const Cloud = () => {
                 <FaArrowRight />
               </div>
             </motion.a>
-          </div>
+          </motion.div>
         </div>
         <div
           className="kub-cert"
         >
           <h4>Kubernetes Certifications</h4>
-          <div className="kubernetes-cert-list"  
+          <motion.div className="kubernetes-cert-list"  
           initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
@@ -410,7 +410,14 @@ const Cloud = () => {
                 },
               },
             }}>
-            <a href="">
+            <motion.a
+              variants={{
+                hidden: { opacity: 0, x: -40 },
+                show: { opacity: 1, x: 0 },
+              }}
+              transition={{ duration: 0.5 }}
+              href=""
+            >
               <img src={cka} alt="" />
               <div
                 className="result"
@@ -430,8 +437,8 @@ const Cloud = () => {
                 </p>
                 <FaArrowRight />
               </div>
-            </a>
-          </div>
+            </motion.a>
+          </motion.div>
         </div>
       </div>
     </section>

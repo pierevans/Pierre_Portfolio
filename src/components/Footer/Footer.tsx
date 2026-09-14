@@ -15,11 +15,11 @@ const Footer = () => {
           <span>LinkedIn</span>
           <IoLogoLinkedin />
         </a>
-        <a href="" target="_blank">
+        <a href="https://github.com/pierevans" target="_blank">
           <span>GitHub</span>
           <FaGithub />
         </a>
-        <a href="" target="_blank">
+        <a href="https://discordapp.com/users/910288178668261457" target="_blank">
           <span>Discord</span>
           <FaDiscord />
         </a>

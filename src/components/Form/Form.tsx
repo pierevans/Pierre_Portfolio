@@ -1,5 +1,6 @@
 import { useForm, type SubmitHandler } from "react-hook-form";
 import { RiMailSendLine } from "react-icons/ri";
+
 import emailjs from "@emailjs/browser";
 import toast from "react-hot-toast";
 
@@ -66,7 +67,6 @@ const Form = () => {
         })}
       />
       {errors.email && <p className="error-message">{errors.email.message}</p>}
-
       <textarea
         id="textarea"
         placeholder="Type your message here..."
@@ -79,7 +79,7 @@ const Form = () => {
       )}
 
       <button type="submit" className="btn-mail" disabled={isSubmitting}>
-        <p>{isSubmitting ? "Sending..." : "Submit"}</p>
+        <p>{isSubmitting ? "Sending..." : "Send Message"}</p>
         <span>
           <RiMailSendLine />
         </span>

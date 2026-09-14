@@ -5,8 +5,10 @@ display: flex;
 align-items: center;
 justify-content: center;
 flex-direction: column;
-gap: 40px;
+gap: 30px;
 overflow: hidden;
+width: 60%;
+margin: 0 auto;
  mask-image: linear-gradient(
     to right,
     transparent,
@@ -17,12 +19,12 @@ overflow: hidden;
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 40px;
+        gap: 20px;
 
         .icon-container {
 
-            width: 80px;
-            height: 80px;
+            width: 60px;
+            height: 60px;
             border-radius: 10px;
             background-color: rgba($primary-color, .1);
             display: flex;

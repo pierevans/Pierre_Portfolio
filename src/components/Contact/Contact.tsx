@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 const Contact = () => {
   return (
     <section className="contact-section ">
+        <img src="/cloud-design.png" alt="contact" className="cloud-design" />
       <div className="background-pattern"></div>
       <div className="contact-card" id="contact">
         <h2>
@@ -40,7 +41,7 @@ const Contact = () => {
               duration: 0.5,
             }}
           >
-            <img src="/cloud-contact.png" alt="cloud" />
+            <img src="/cloud-contact-pic.png" alt="cloud" />
           </motion.div>
         </div>
       </div>

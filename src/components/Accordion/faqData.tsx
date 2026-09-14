@@ -15,9 +15,9 @@ const faqData: {question: string, answer: string}[]= [
       "I mainly work with React, TypeScript, MongoDb, Express.js Node.js, and modern frontend tools like CSS, SCSS, Tailwind and Etc..",
   },
   {
-    question: "Do you build responsive websites?",
+    question: "What is your experience with cloud engineering?",
     answer:
-      "Yes, all my projects are designed to work across desktop, tablet, and mobile devices.",
+      "I have experience in designing, implementing, and managing cloud-based solutions. I am familiar with cloud architecture, deployment strategies, and optimization techniques.",
   },
   {
     question: "Can I see your source code?",
