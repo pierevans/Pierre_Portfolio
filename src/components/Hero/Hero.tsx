@@ -42,7 +42,7 @@ const Hero = () => {
       img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-original.svg",
       color: "#326CE5",
       top: "80%",
-      left: "90%",
+      left: "95%",
       width: "50px",
     },
     {

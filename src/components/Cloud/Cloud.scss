@@ -12,6 +12,7 @@
     height: 400px;
     width: 100%;
     .stack-container {
+      flex-wrap: wrap;
       max-width: 1500px;
       gap: 20px;
       display: flex;
@@ -421,6 +422,13 @@
 
 @media (max-width: 950px) {
   .cloud-container {
+    
+  .cloud-stack-container {
+    margin: 100px 0 150px;
+    .stack-container {
+      margin: 70px 0 30px;
+    }
+  }
     .cert-container {
       .aws-cert {
         .aws-cert-list {
