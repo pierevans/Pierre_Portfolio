@@ -30,7 +30,7 @@ const cloudProjects: {
     level: "easy",
   },
   {
-    title: "project 4",
+    title: "Hosting with Terraform",
     description: "Provisioned and hosted a static website on AWS using Terraform, Amazon S3, and CloudFront to deliver a scalable, secure, and reliable web hosting solution.",
     href: "https://github.com/pierevans/Host-a-Website-on-Amazon-S3-with-Terraform",
     src: "/cloud-project-pics/Host-Static-Web-Terraform.png",
