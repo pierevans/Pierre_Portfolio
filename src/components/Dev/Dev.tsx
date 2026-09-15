@@ -5,6 +5,7 @@ import TitleAnimation from "../Animation/TitleAnimation";
 import DevScroll from "../Animation/DevScroll/DevScroll";
 import DevTechStack from "../DevTechstack/DevTechStack";
 import DevCard from "../Card/DevCard/DevCard";
+
 import { motion } from "framer-motion";
 import { CiCirclePlus } from "react-icons/ci";
 

@@ -2,75 +2,89 @@
 
 .swiper {
   position: relative;
-  margin: 80px auto 0;
-  width: 70%;
-  max-width: 900px;
+  margin: 50px auto 0;
+  width: 90%;
+  max-width: 1100px;
   height: 500px;
   transform-style: preserve-3d;
-  overflow: hidden;
-}
-
-.swiper-slide {
-  background-position: center;
-  background-size: cover;
-}
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  object-fit: fill;
   border-radius: 20px;
-  height: 500px;
-}
-
-.swiper-pagination {
-  bottom: 5% !important;
-}
-.swiper-pagination-bullet {
-  width: 10px;
-  height: 10px;
-  background: #ffff !important;
-}
-
-.swiper-pagination-bullet-active {
-  background: $primary-color !important;
-  opacity: 1;
-  transform: scale(1.5);
+  background: linear-gradient(
+  to right,
+  rgb(220, 211, 252),
+  rgba(255, 255, 255, 0.5)
+);
+  filter: blur(20%);
+  border: 1px solid rgb(233, 233, 233);
+   box-shadow:
+    5px 5px 10px rgb(0, 0, 0, 0.1),
+    -5px -5px 10px rgb(0, 0, 0, 0.1);
 }
 
 .dev-card {
+
+  position: relative;
+  background-position: center;
+  background-size: cover;
   border-radius: 20px;
+  height: 500px;
   box-shadow:
-    2px 2px 20px rgba(0, 0, 0, 0.2),
-    -2px -2px 20px rgba(0, 0, 0, 0.2);
-  .dev-project {
-    position: absolute;
-    top: 50%;
-    height: 100%;
+    5px 5px 10px rgb(0, 0, 0, 0.1),
+    -5px -5px 10px rgb(0, 0, 0, 0.1);
+  position: relative;
+  filter: blur(20%);
+  .project-container {
+    
     width: 100%;
+    height: 100%;
     border-radius: 20px;
-    padding-left: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    transform: translateY(-50%);
-    opacity: 0;
-    transition: all ease-in 0.3s;
-    h4 {
+    overflow: hidden;
+    padding: 30px;
+    span {
+      display: flex;
+      align-items: center;
+      gap: 10px;
       color: $primary-color;
-      font-size: 26px !important;
+      font-weight: bold;
+      margin-bottom: 15px;
+      .project-logo {
+        font-size: 20px;
+        border-radius: 10px;
+        padding: 2px;
+        background-color: lighten($primary-color, 30%);
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    h4 {
+      margin-bottom: 20px;
     }
     p {
-      color: antiquewhite;
-      width: 80%;
-      margin: 10px 0 50px;
-      text-align: justify;
-      font-size: 18px !important;
+      width: 400px;
     }
+
+    .dev-icons {
+      width: 400px;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 25px 0;
+      img {
+        background-color: lighten($primary-color, 40%);
+        border-radius: 20%;
+        width: 50px;
+        padding: 10px;
+        box-shadow: 1px 1px 10px rgb(0, 0, 0, 0.1);
+      }
+    }
+
     .dev-btns {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      gap: 10px;
       width: 280px;
 
       a {
@@ -106,15 +120,33 @@
       }
     }
   }
-
-  .dev-project:hover {
-    opacity: 1;
-    background: radial-gradient(
-      circle at center,
-      rgba(0, 0, 0, 0.2) 20%,
-      rgba(0, 0, 0, 0.7) 80%
-    );
+  .web-img {
+    width: 500px;
+    height: 300px;
+    border-radius: 20px;
+    position: absolute;
+    left: 45%;
+    top: 20%;
+    box-shadow:
+      1px 1px 20px rgb(0, 0, 0, 0.2),
+      1px 1px 10px rgb(0, 0, 0, 0.1);
+    .dev-project-img {
+      border-radius: 20px;
+      width: 100%;
+      height: 100%;
+    }
   }
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+}
+
+.swiper-pagination-bullet-active {
+  background: $primary-color !important;
+  opacity: 1;
+  transform: scale(1.5);
 }
 
 @media (max-width: 950px) {
@@ -126,89 +158,89 @@
     height: 400px;
   }
 
-  .dev-card {
-    border-radius: 20px;
-    box-shadow:
-      2px 2px 20px rgba(0, 0, 0, 0.1),
-      -2px -2px 20px rgba(0, 0, 0, 0.1);
-    .dev-project {
-      position: absolute;
-      top: 50%;
-      height: 100%;
-      width: 100%;
-      border-radius: 20px;
-      padding-left: 100px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      transform: translateY(-50%);
-      opacity: 0;
-      transition: all ease-in 0.3s;
-      h4 {
-        color: $primary-color;
-        font-size: 22px !important;
-      }
-      p {
-        margin: 40px 0 50px;
-        color: $bg-color;
-        text-align: justify;
-        font-size: 14px !important;
-      }
-      .dev-btns {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 280px;
+  // .dev-card {
+  //   border-radius: 20px;
+  //   box-shadow:
+  //     2px 2px 20px rgba(0, 0, 0, 0.1),
+  //     -2px -2px 20px rgba(0, 0, 0, 0.1);
+  //   .dev-project {
+  //     position: absolute;
+  //     top: 50%;
+  //     height: 100%;
+  //     width: 100%;
+  //     border-radius: 20px;
+  //     padding-left: 100px;
+  //     display: flex;
+  //     flex-direction: column;
+  //     justify-content: center;
+  //     transform: translateY(-50%);
+  //     opacity: 0;
+  //     transition: all ease-in 0.3s;
+  //     h4 {
+  //       color: $primary-color;
+  //       font-size: 22px !important;
+  //     }
+  //     p {
+  //       margin: 40px 0 50px;
+  //       color: $bg-color;
+  //       text-align: justify;
+  //       font-size: 14px !important;
+  //     }
+  //     .dev-btns {
+  //       display: flex;
+  //       align-items: center;
+  //       justify-content: space-between;
+  //       width: 280px;
 
-        a {
-          width: 100px;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          width: 120px;
+  //       a {
+  //         width: 100px;
+  //         display: flex;
+  //         align-items: center;
+  //         justify-content: space-between;
+  //         width: 120px;
 
-          button {
-            width: 100%;
-            height: 100%;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 5px;
-            padding: 10px 20px;
-            font-size: 14px;
-            border-radius: 5px;
-            border: none;
-            font-weight: 500;
-            background-color: $primary-color;
-            color: $bg-color;
-            border: none;
-            transition: all 0.3s ease;
+  //         button {
+  //           width: 100%;
+  //           height: 100%;
+  //           cursor: pointer;
+  //           display: flex;
+  //           align-items: center;
+  //           justify-content: center;
+  //           gap: 5px;
+  //           padding: 10px 20px;
+  //           font-size: 14px;
+  //           border-radius: 5px;
+  //           border: none;
+  //           font-weight: 500;
+  //           background-color: $primary-color;
+  //           color: $bg-color;
+  //           border: none;
+  //           transition: all 0.3s ease;
 
-            &:hover {
-              background-color: darken($primary-color, 15%);
-            }
-          }
-        }
-      }
+  //           &:hover {
+  //             background-color: darken($primary-color, 15%);
+  //           }
+  //         }
+  //       }
+  //     }
 
-      .dev-btns a:nth-child(2) button {
-        background-color: #ffff;
-        color: $primary-color;
-        border: 1px solid $primary-color;
-        &:hover {
-          background-color: lighten($secondary-color, 6%);
-        }
-      }
-    }
+  //     .dev-btns a:nth-child(2) button {
+  //       background-color: #ffff;
+  //       color: $primary-color;
+  //       border: 1px solid $primary-color;
+  //       &:hover {
+  //         background-color: lighten($secondary-color, 6%);
+  //       }
+  //     }
+  //   }
 
-    .dev-project:hover {
-      opacity: 1;
-      background: radial-gradient(
-        circle at center,
-        rgba(0, 0, 0, 0.2) 20%,
-        rgba(0, 0, 0, 0.7) 100%
-      );
-    }
-  }
+  //   .dev-project:hover {
+  //     opacity: 1;
+  //     background: radial-gradient(
+  //       circle at center,
+  //       rgba(0, 0, 0, 0.2) 20%,
+  //       rgba(0, 0, 0, 0.7) 100%
+  //     );
+  //   }
+  // }
 }
