@@ -220,7 +220,7 @@ const Hero = () => {
           <img src="/blob-img.png" alt="My Picture" className="blob-img" />
           <img src="/hero-sd-img.png" alt="" className="hero-sd"/>
           <motion.img
-            src="hero.png"
+            src="hero-profile.png"
             alt="My Picture"
             drag
             dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}

@@ -164,7 +164,7 @@
       .terraform-cert-list {
         width: 100%;
         display: flex;
-        
+
         gap: 20px;
         flex-wrap: wrap;
         a {
@@ -422,13 +422,13 @@
 
 @media (max-width: 950px) {
   .cloud-container {
-    
-  .cloud-stack-container {
-    margin: 100px 0 150px;
-    .stack-container {
-      margin: 70px 0 30px;
+    .cloud-stack-container {
+      margin: 100px 0 150px;
+      .stack-container {
+        margin: 70px 0 30px;
+      }
     }
-  }
+
     .cert-container {
       .aws-cert {
         .aws-cert-list {
@@ -457,10 +457,23 @@
         }
       }
     }
+
+    .project-container {
+      .project-card-container {
+        display: flex;
+        justify-content: center;
+      }
+    }
   }
 }
 @media (max-width: 650px) {
   .cloud-container {
+    .cloud-stack-container {
+      margin: 250px 0 300px;
+      .stack-container {
+        margin: 70px 0 30px;
+      }
+    }
     .aws-scroll {
       display: none;
     }
@@ -491,6 +504,12 @@
             height: 300px;
           }
         }
+      }
+    }
+      .project-container {
+      .project-card-container {
+        display: flex;
+        justify-content: center;
       }
     }
   }
