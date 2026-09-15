@@ -3,7 +3,6 @@ import { MdConnectWithoutContact, MdDescription } from "react-icons/md";
 import { TbCloudComputing } from "react-icons/tb";
 import { SiDevbox } from "react-icons/si";
 import { FaHome } from "react-icons/fa";
-import { CgMenuRound } from "react-icons/cg";
 
 import { useEffect, useState } from "react";
 
