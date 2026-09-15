@@ -199,7 +199,7 @@ const Hero = () => {
             <a href="#contact">
               <button>Contact Me</button>
             </a>
-            <a href="path/to/your/cv.pdf" download="Pierre_CV.pdf">
+            <a href="path/to/your/cv.pdf" download="pierre_konan_cv.pdf">
               <button>
                 Download CV <GrDownload />
               </button>

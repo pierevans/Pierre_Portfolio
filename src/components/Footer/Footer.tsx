@@ -11,7 +11,7 @@ const Footer = () => {
       <img className="footer-logo-1" src="/aws_logo_footer.png" alt="aws-logo" />
       <img className="footer-logo-2" src="/aws_logo_footer.png" alt="aws-logo" />
       <div className="footer-links">
-        <a href="" target="_blank">
+        <a href="https://www.linkedin.com/in/pierrekonan13" target="_blank">
           <span>LinkedIn</span>
           <IoLogoLinkedin />
         </a>

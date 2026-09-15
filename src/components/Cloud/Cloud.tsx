@@ -463,7 +463,8 @@ const Cloud = () => {
               transition={{
                 duration: 0.5,
               }}
-              href=""
+              href="https://www.credly.com/badges/14a246e9-74b3-4467-884b-d28b7fdf7a8a/public_url"
+              target="_blank"
             >
               <img src={clf} alt="Cloud Practitioner" />
 
@@ -651,7 +652,8 @@ const Cloud = () => {
               transition={{
                 duration: 0.5,
               }}
-              href=""
+              href="https://www.credly.com/badges/6ff34a01-9878-47b9-9007-c69789a64c25/public_url"
+              target="_blank"
             >
               <img
                 src={hcta}
