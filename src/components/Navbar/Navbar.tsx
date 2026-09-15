@@ -29,20 +29,23 @@ const Navbar = () => {
         setLinks(false);
       }
 
+      const scrollPosition = window.scrollY + 160;
+
+      let currentSection = "home";
+
       sectionIds.forEach((id) => {
         const section = document.getElementById(id);
+
         if (!section) return;
 
-        const sectionTop = section.offsetTop - 120;
-        const sectionHeight = section.offsetHeight;
+        const sectionTop = section.getBoundingClientRect().top + window.scrollY;
 
-        if (
-          currentYScroll >= sectionTop &&
-          currentYScroll < sectionTop + sectionHeight
-        ) {
-          setActiveSection(id);
+        if (scrollPosition >= sectionTop) {
+          currentSection = id;
         }
       });
+
+      setActiveSection(currentSection);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -91,7 +94,7 @@ const Navbar = () => {
           </li>
 
           <li>
-            <a 
+            <a
               href="#about"
               className={activeSection === "about" ? "active" : ""}
             >
@@ -101,7 +104,7 @@ const Navbar = () => {
           </li>
 
           <li>
-            <a 
+            <a
               href="#contact"
               className={activeSection === "contact" ? "active" : ""}
             >
