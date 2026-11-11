@@ -216,9 +216,8 @@ const Hero = () => {
             duration: 0.5,
           }}
         >
-        
           <img src="/blob-img.png" alt="My Picture" className="blob-img" />
-          <img src="/hero-sd-img.png" alt="" className="hero-sd"/>
+          <img src="/hero-sd-img.png" alt="" className="hero-sd" />
           <motion.img
             src="hero-profile.png"
             alt="My Picture"
